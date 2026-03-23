@@ -4,10 +4,16 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
+interface Extra {
+  name: string;
+  url: string;
+}
+
 interface DownloadData {
   email: string;
   tier: string;
   downloads: Record<string, string>;
+  extras: Extra[] | null;
 }
 
 function DownloadContent() {
@@ -127,18 +133,10 @@ function DownloadContent() {
               </div>
               <div>
                 <p className="text-white font-medium text-[13px]">
-                  {name === "starter"
-                    ? "Starter Pack"
-                    : name === "full-archive"
-                      ? "Full Archive"
-                      : name}
+                  Newsletter Archive
                 </p>
                 <p className="text-[#555] text-[11px] mt-0.5">
-                  {name === "starter"
-                    ? "10 recent posts + sample workflows"
-                    : name === "full-archive"
-                      ? "All 72 posts + every workflow"
-                      : "ZIP archive"}
+                  All 72 posts as Markdown — ZIP file
                 </p>
               </div>
             </div>
@@ -158,6 +156,48 @@ function DownloadContent() {
           </a>
         ))}
       </div>
+
+      {/* Paid extras */}
+      {data.extras && data.extras.length > 0 && (
+        <>
+          <div className="h-px bg-[#252525] w-full my-5" />
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#FF6719] mb-3 w-full">
+            Your paid perks
+          </p>
+          <div className="w-full space-y-2">
+            {data.extras.map((extra) => (
+              <a
+                key={extra.name}
+                href={extra.url}
+                className="flex items-center justify-between w-full rounded-lg border border-[#FF6719]/15 bg-[#1e1e1e] hover:border-[#FF6719]/30 px-4 py-3 transition-colors group"
+              >
+                <span className="text-white text-[13px]">{extra.name}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-[#FF6719] transition-colors">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Upgrade CTA for free users */}
+      {data.tier === "free" && (
+        <div className="w-full mt-6 rounded-lg border border-[#252525] bg-[#1e1e1e] px-4 py-3 text-center">
+          <p className="text-[#a2a2a2] text-[12px]">
+            Want the Slack community, AI tools bundle & LinkedIn connection?{" "}
+            <a
+              href="https://ruben.substack.com/subscribe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF6719] hover:text-[#e55a14] transition-colors font-medium"
+            >
+              Upgrade to paid &rarr;
+            </a>
+          </p>
+        </div>
+      )}
 
       {/* Footer */}
       <p className="text-[#555] text-[11px] mt-8">

@@ -21,23 +21,28 @@ export function GET(request: NextRequest) {
   }
 
   // TODO: Check subscriber tier against Substack data
-  // For now, all verified emails get the starter pack
-  // Paid subscribers would also get the full archive
   const tier: string = "free";
 
-  const downloads: Record<string, string> =
+  // Free gets the full archive (all 72 posts)
+  // Paid gets the archive + extras (Slack, tools bundle, LinkedIn)
+  const downloads: Record<string, string> = {
+    "full-archive": "/howtoai-full-archive.zip",
+  };
+
+  // Paid subscribers also see links to their extras
+  const extras =
     tier === "paid"
-      ? {
-          starter: "/howtoai-starter-pack.zip",
-          "full-archive": "/howtoai-full-archive.zip",
-        }
-      : {
-          starter: "/howtoai-starter-pack.zip",
-        };
+      ? [
+          { name: "Private Slack community", url: "#slack-invite" },
+          { name: "AI tools bundle ($219 value)", url: "#tools-bundle" },
+          { name: "LinkedIn connection (760K)", url: "#linkedin" },
+        ]
+      : null;
 
   return Response.json({
     email: payload.email,
     tier,
     downloads,
+    extras,
   });
 }

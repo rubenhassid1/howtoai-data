@@ -70,11 +70,11 @@ export default function Home() {
             <div className="flex items-center gap-2 mb-2">
               <div className="w-1.5 h-1.5 rounded-full bg-[#a2a2a2]" />
               <span className="text-[11px] font-semibold uppercase tracking-wider text-[#a2a2a2]">
-                Free
+                Free subscribers
               </span>
             </div>
             <p className="text-[#ccc] text-[13px] leading-relaxed">
-              <strong className="text-white">10 posts</strong> + sample AI workflows + starter MCP access.
+              <strong className="text-white">All 72 newsletter posts</strong> as Markdown files in a ZIP + MCP access.
             </p>
           </div>
 
@@ -83,18 +83,21 @@ export default function Home() {
             <div className="flex items-center gap-2 mb-2">
               <div className="w-1.5 h-1.5 rounded-full bg-[#FF6719]" />
               <span className="text-[11px] font-semibold uppercase tracking-wider text-[#FF6719]">
-                Paid
+                Paid subscribers
               </span>
             </div>
-            <p className="text-[#ccc] text-[13px] leading-relaxed">
-              <strong className="text-white">All 72 posts</strong> + every workflow + full MCP + private GitHub repo.
-            </p>
+            <ul className="text-[#ccc] text-[13px] leading-relaxed space-y-1">
+              <li><strong className="text-white">Everything free gets</strong></li>
+              <li>+ Private Slack community <span className="text-[#555]">(1,039 members)</span></li>
+              <li>+ $219 in AI tools bundle</li>
+              <li>+ Direct LinkedIn connection <span className="text-[#555]">(760K followers)</span></li>
+            </ul>
           </div>
         </div>
 
         {/* GitHub link */}
         <p className="text-[#a2a2a2] text-[12px] mb-8">
-          Want the free sample?{" "}
+          Want to browse the data first?{" "}
           <a
             href="https://github.com/rubenhassid1/howtoai-starter-data"
             target="_blank"
