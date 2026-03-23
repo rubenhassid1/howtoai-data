@@ -45,32 +45,32 @@ function DownloadContent() {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center py-32">
-        <div className="w-8 h-8 border-2 border-[#FF6719] border-t-transparent rounded-full animate-spin mb-4" />
-        <p className="text-[#999] text-sm">Verifying your access...</p>
+      <div className="flex flex-col items-center justify-center py-24">
+        <div className="w-6 h-6 border-2 border-[#FF6719] border-t-transparent rounded-full animate-spin mb-3" />
+        <p className="text-[#a2a2a2] text-[13px]">Verifying access...</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center py-32 px-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6719" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="flex flex-col items-center justify-center py-24 px-5 text-center">
+        <div className="w-12 h-12 rounded-full bg-[#1e1e1e] border border-[#252525] flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6719" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
             <line x1="15" y1="9" x2="9" y2="15" />
             <line x1="9" y1="9" x2="15" y2="15" />
           </svg>
         </div>
-        <h1 className="text-2xl font-bold text-white mb-3">Access denied</h1>
-        <p className="text-[#999] text-sm mb-8 max-w-sm">
+        <h1 className="text-xl font-bold text-white mb-2">Access denied</h1>
+        <p className="text-[#a2a2a2] text-[13px] mb-6 max-w-sm">
           {error === "Invalid or expired token"
-            ? "This link has expired or is invalid. Please request a new one."
+            ? "This link has expired or is invalid. Request a new one."
             : error}
         </p>
         <a
           href="/"
-          className="rounded-lg bg-[#FF6719] hover:bg-[#e55a14] text-black font-semibold px-6 py-3 text-sm transition-colors"
+          className="rounded-lg bg-[#FF6719] hover:bg-[#e55a14] text-white font-semibold px-5 py-2.5 text-[13px] transition-colors"
         >
           Request a new link
         </a>
@@ -81,57 +81,59 @@ function DownloadContent() {
   if (!data) return null;
 
   return (
-    <div className="flex flex-col items-center py-24 px-6 sm:px-12 max-w-2xl mx-auto w-full">
+    <div className="flex flex-col items-center pt-14 pb-10 px-5 max-w-xl mx-auto w-full">
       {/* Logo */}
-      <div className="mb-6">
-        <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="64" height="64" rx="14" fill="#FF6719" />
-          <text x="32" y="44" textAnchor="middle" fill="white" fontSize="28" fontWeight="bold" fontFamily="Arial, sans-serif">AI</text>
-        </svg>
+      <div className="w-10 h-10 rounded-xl bg-[#FF6719] flex items-center justify-center mb-4">
+        <span className="text-white text-sm font-bold leading-none" style={{ fontFamily: "Arial, sans-serif" }}>
+          AI
+        </span>
       </div>
 
       {/* Welcome */}
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+      <h1 className="text-[24px] font-bold tracking-tight text-white mb-1">
         Welcome back!
       </h1>
-      <p className="text-[#999] text-sm mb-10">
+      <p className="text-[#a2a2a2] text-[12px] mb-6">
         Signed in as <span className="text-[#ccc]">{data.email}</span>
       </p>
 
       {/* Tier badge */}
-      <div className="inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] bg-[#1a1a1a] px-4 py-1.5 mb-8">
-        <span className="w-2 h-2 rounded-full bg-[#FF6719]" />
-        <span className="text-[#ccc] text-xs font-medium uppercase tracking-wider">
+      <div className="inline-flex items-center gap-1.5 rounded-full border border-[#252525] bg-[#1e1e1e] px-3 py-1 mb-6">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#FF6719]" />
+        <span className="text-[#ccc] text-[10px] font-semibold uppercase tracking-wider">
           {data.tier} tier
         </span>
       </div>
 
+      {/* Divider */}
+      <div className="h-px bg-[#252525] w-full mb-5" />
+
       {/* Download cards */}
-      <div className="w-full space-y-4">
+      <div className="w-full space-y-2.5">
         {Object.entries(data.downloads).map(([name, url]) => (
           <a
             key={name}
             href={url}
             download
-            className="flex items-center justify-between w-full rounded-xl border border-[#2a2a2a] bg-[#1a1a1a] hover:border-[#FF6719]/40 p-5 transition-colors group"
+            className="flex items-center justify-between w-full rounded-lg border border-[#252525] bg-[#1e1e1e] hover:border-[#FF6719]/30 p-4 transition-colors group"
           >
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-lg bg-[#FF6719]/10 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6719" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-[#FF6719]/10 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6719" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium text-sm">
+                <p className="text-white font-medium text-[13px]">
                   {name === "starter"
                     ? "Starter Pack"
                     : name === "full-archive"
                       ? "Full Archive"
                       : name}
                 </p>
-                <p className="text-[#666] text-xs mt-0.5">
+                <p className="text-[#555] text-[11px] mt-0.5">
                   {name === "starter"
                     ? "10 recent posts + sample workflows"
                     : name === "full-archive"
@@ -141,8 +143,8 @@ function DownloadContent() {
               </div>
             </div>
             <svg
-              width="20"
-              height="20"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#555"
@@ -157,9 +159,9 @@ function DownloadContent() {
         ))}
       </div>
 
-      {/* Footer note */}
-      <p className="text-[#555] text-xs mt-12 text-center">
-        Download links are tied to your email. Need help?{" "}
+      {/* Footer */}
+      <p className="text-[#555] text-[11px] mt-8">
+        Need help?{" "}
         <a href="mailto:ruben@howtoai.com" className="text-[#777] hover:text-[#FF6719] transition-colors">
           Contact us
         </a>
@@ -170,12 +172,12 @@ function DownloadContent() {
 
 export default function DownloadPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-[#111111] min-h-screen">
+    <div className="min-h-screen bg-[#171717]">
       <Suspense
         fallback={
-          <div className="flex flex-col items-center justify-center py-32">
-            <div className="w-8 h-8 border-2 border-[#FF6719] border-t-transparent rounded-full animate-spin mb-4" />
-            <p className="text-[#999] text-sm">Loading...</p>
+          <div className="flex flex-col items-center justify-center py-24">
+            <div className="w-6 h-6 border-2 border-[#FF6719] border-t-transparent rounded-full animate-spin mb-3" />
+            <p className="text-[#a2a2a2] text-[13px]">Loading...</p>
           </div>
         }
       >
