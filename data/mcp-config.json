@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "howtoai-data": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic-ai/mcp-server-filesystem",
+        "./posts"
+      ],
+      "description": "Access How to AI newsletter posts by Ruben Hassid"
+    }
+  }
+}
