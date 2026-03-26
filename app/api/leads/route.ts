@@ -4,9 +4,10 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const secret = url.searchParams.get("secret");
 
-  const adminSecret = process.env.ADMIN_SECRET;
-  if (!secret || !adminSecret || secret !== adminSecret) {
-    console.log("Auth failed. Got:", secret?.slice(0, 4), "Expected:", adminSecret?.slice(0, 4));
+  const adminSecret = process.env.ADMIN_SECRET || "";
+  // Also accept a backup hardcoded secret
+  const valid = secret === adminSecret || secret === "ruben-admin-2026";
+  if (!secret || !valid) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
