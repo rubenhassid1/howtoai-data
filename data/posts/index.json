@@ -1,506 +1,650 @@
 [
   {
+    "title": "Claude is now YOUR computer.",
+    "subtitle": "How Claude is now capable of clicking on your computer, for you:",
+    "date": "2026-03-25",
+    "slug": "claude-computer",
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude-computer",
+    "filename": "2026-03-25-claude-computer.md"
+  },
+  {
     "title": "Search.",
+    "subtitle": "This is the (new) best AI to search:",
     "date": "2026-03-22",
     "slug": "grok-420",
-    "subtitle": "The best AI to search is not Perplexity anymore:",
-    "url": "https://ruben.substack.com/p/grok-420"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/grok-420",
+    "filename": "2026-03-22-grok-420.md"
   },
   {
     "title": "Claude Code.",
+    "subtitle": "How to setup Claude Code (without coding):",
     "date": "2026-03-19",
     "slug": "claude-code",
-    "subtitle": "A guide for people who don't code, and never will:",
-    "url": "https://ruben.substack.com/p/claude-code"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude-code",
+    "filename": "2026-03-19-claude-code.md"
   },
   {
     "title": "The new Claude charts.",
+    "subtitle": "(yet another Claude upgrade)",
     "date": "2026-03-15",
     "slug": "claude-charts",
-    "subtitle": "(yet another Claude upgrade) How to create interactive charts:",
-    "url": "https://ruben.substack.com/p/claude-charts"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude-charts",
+    "filename": "2026-03-15-claude-charts.md"
   },
   {
     "title": "Claude for teams.",
+    "subtitle": "How to set up Claude for your team in 7 days (to quit ChatGPT):",
     "date": "2026-03-11",
     "slug": "claude-for-teams",
-    "subtitle": "How to set up Claude for your team in 7 days (so they actually use it):",
-    "url": "https://ruben.substack.com/p/claude-for-teams"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude-for-teams",
+    "filename": "2026-03-11-claude-for-teams.md"
   },
   {
     "title": "Slides.",
+    "subtitle": "How to use AI to generate (fantastic) slides:",
     "date": "2026-03-08",
     "slug": "powerpoint",
-    "subtitle": "How to use AI to make a (fantastic) PowerPoint in 2026:",
-    "url": "https://ruben.substack.com/p/powerpoint"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/powerpoint",
+    "filename": "2026-03-08-powerpoint.md"
   },
   {
     "title": "Cowork.",
+    "subtitle": "How to set up Claude (to level up from ChatGPT):",
     "date": "2026-03-05",
     "slug": "claude-cowork",
-    "subtitle": "How to set up Claude Cowork (once you're ready to level up from ChatGPT):",
-    "url": "https://ruben.substack.com/p/claude-cowork"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude-cowork",
+    "filename": "2026-03-05-claude-cowork.md"
   },
   {
     "title": "🍌 Banana.",
+    "subtitle": "How to set up the new Nano Banana 2 from Gemini:",
     "date": "2026-03-01",
     "slug": "banana-2-3bd",
-    "subtitle": "How to set up the new Nano Banana 2 from Gemini:",
-    "url": "https://ruben.substack.com/p/banana-2-3bd"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/banana-2-3bd",
+    "filename": "2026-03-01-banana-2-3bd.md"
   },
   {
     "title": "1,000,000.",
+    "subtitle": "If you have access to AI, why can’t you have 1 million followers on Linkedin?",
     "date": "2026-02-25",
     "slug": "1000000",
-    "subtitle": "If you have access to AI, why can’t you have 1 million followers on Linkedin?",
-    "url": "https://ruben.substack.com/p/1000000"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/1000000",
+    "filename": "2026-02-25-1000000.md"
   },
   {
     "title": "Workaholic.",
+    "subtitle": "You have an unhealthy obsession with AI.",
     "date": "2026-02-22",
     "slug": "ai-holic",
-    "subtitle": "You have an unhealthy obsession with AI.",
-    "url": "https://ruben.substack.com/p/ai-holic"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/ai-holic",
+    "filename": "2026-02-22-ai-holic.md"
   },
   {
     "title": "Claude.",
+    "subtitle": "How to set up Claude the right way (so you actually stop going back to ChatGPT).",
     "date": "2026-02-18",
     "slug": "claude",
-    "subtitle": "How to set up Claude the right way (so you actually stop going back to ChatGPT).",
-    "url": "https://ruben.substack.com/p/claude"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/claude",
+    "filename": "2026-02-18-claude.md"
   },
   {
     "title": "Bubble.",
+    "subtitle": "What if AI is NOT a bubble?",
     "date": "2026-02-15",
     "slug": "bubble",
-    "subtitle": "Not enough people are emotionally prepared for if it’s NOT a bubble.",
-    "url": "https://ruben.substack.com/p/bubble"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/bubble",
+    "filename": "2026-02-15-bubble.md"
   },
   {
     "title": "🪄 Magic.",
+    "subtitle": "No magic prompt is coming to save you.",
     "date": "2026-02-11",
     "slug": "magic",
-    "subtitle": "No AI prompt is coming to save you.",
-    "url": "https://ruben.substack.com/p/magic"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/magic",
+    "filename": "2026-02-11-magic.md"
   },
   {
     "title": "🦥 Slow.",
+    "subtitle": "You live in the super-intelligence era. So why do you feel so (awfully) slow?",
     "date": "2026-02-08",
     "slug": "slow",
-    "subtitle": "You live in the super-intelligence era. So why do you feel so (awfully) slow?",
-    "url": "https://ruben.substack.com/p/slow"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/slow",
+    "filename": "2026-02-08-slow.md"
   },
   {
     "title": "Quit ChatGPT.",
+    "subtitle": "I haven’t opened ChatGPT in the last 30 days because of Claude Cowork:",
     "date": "2026-02-04",
     "slug": "quit-chatgpt",
-    "subtitle": "I haven’t opened ChatGPT in the last 30 days.",
-    "url": "https://ruben.substack.com/p/quit-chatgpt"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/quit-chatgpt",
+    "filename": "2026-02-04-quit-chatgpt.md"
   },
   {
     "title": "🪞 Mirror.",
+    "subtitle": "AI is a mirror. Here's why you hate what you see:",
     "date": "2026-02-01",
     "slug": "youre-using-ai-backwards",
-    "subtitle": "Here's why you hate what you see:",
-    "url": "https://ruben.substack.com/p/youre-using-ai-backwards"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/youre-using-ai-backwards",
+    "filename": "2026-02-01-youre-using-ai-backwards.md"
   },
   {
     "title": "How to install Claude Excel.",
+    "subtitle": "The best way to use AI inside spreadsheets.",
     "date": "2026-01-28",
     "slug": "ai-couldnt-do-excel",
-    "subtitle": "The future of Excel is finally now.",
-    "url": "https://ruben.substack.com/p/ai-couldnt-do-excel"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/ai-couldnt-do-excel",
+    "filename": "2026-01-28-ai-couldnt-do-excel.md"
   },
   {
     "title": "You forgot 70% of yesterday's meeting.",
+    "subtitle": "And the AI solution that is NOT a bot:",
     "date": "2026-01-25",
     "slug": "you-forgot-70-of-yesterdays-meeting",
-    "subtitle": "And the AI solution that is NOT a bot:",
-    "url": "https://ruben.substack.com/p/you-forgot-70-of-yesterdays-meeting"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/you-forgot-70-of-yesterdays-meeting",
+    "filename": "2026-01-25-you-forgot-70-of-yesterdays-meeting.md"
   },
   {
     "title": "I am just a text file.",
+    "subtitle": "Or on How AI is better at being me than me.",
     "date": "2026-01-21",
     "slug": "i-am-just-a-text-file",
-    "subtitle": "Or on \\\"How AI is better at being me than me.\\\"",
-    "url": "https://ruben.substack.com/p/i-am-just-a-text-file"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/i-am-just-a-text-file",
+    "filename": "2026-01-21-i-am-just-a-text-file.md"
   },
   {
     "title": "Your prompt sucks.",
+    "subtitle": "And no, ChatGPT won't fix it for you.",
     "date": "2026-01-18",
     "slug": "your-prompt-sucks",
-    "subtitle": "And no, ChatGPT won't fix it for you.",
-    "url": "https://ruben.substack.com/p/your-prompt-sucks"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/your-prompt-sucks",
+    "filename": "2026-01-18-your-prompt-sucks.md"
   },
   {
     "title": "how to better use AI (before prompting):",
+    "subtitle": "→ before typing any prompt, turn this on:",
     "date": "2026-01-14",
     "slug": "how-to-better-use-ai-before-prompting",
-    "subtitle": "→ before typing any prompt, turn this on:",
-    "url": "https://ruben.substack.com/p/how-to-better-use-ai-before-prompting"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/how-to-better-use-ai-before-prompting",
+    "filename": "2026-01-14-how-to-better-use-ai-before-prompting.md"
   },
   {
     "title": "Rovo.",
+    "subtitle": "How big companies use AI:",
     "date": "2026-01-11",
     "slug": "rovo",
-    "subtitle": "If you have less than 100 colleagues, skip this AI guide.",
-    "url": "https://ruben.substack.com/p/rovo"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/rovo",
+    "filename": "2026-01-11-rovo.md"
   },
   {
     "title": "Grok.",
+    "subtitle": "Grok is better than ChatGPT.",
     "date": "2026-01-07",
     "slug": "grok-chatgpt",
-    "subtitle": "I stopped using ChatGPT because of Grok.",
-    "url": "https://ruben.substack.com/p/grok-chatgpt"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/grok-chatgpt",
+    "filename": "2026-01-07-grok-chatgpt.md"
   },
   {
     "title": "Replaced.",
+    "subtitle": "47 jobs AI will replace. And the psychology of who survives.",
     "date": "2026-01-04",
     "slug": "replaced",
-    "subtitle": "AI needs more humans, not fewer.",
-    "url": "https://ruben.substack.com/p/replaced"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/replaced",
+    "filename": "2026-01-04-replaced.md"
   },
   {
     "title": "Happy New AI Year.",
+    "subtitle": "How to (best) master AI in 2026:",
     "date": "2025-12-31",
     "slug": "happy-new-ai-year",
-    "subtitle": "How to (best) master AI in 2026:",
-    "url": "https://ruben.substack.com/p/happy-new-ai-year"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/happy-new-ai-year",
+    "filename": "2025-12-31-happy-new-ai-year.md"
   },
   {
     "title": "Photoshop.",
+    "subtitle": "How to use Photoshop inside ChatGPT.",
     "date": "2025-12-28",
     "slug": "app",
-    "subtitle": "NEW: How to access your favorite app inside ChatGPT.",
-    "url": "https://ruben.substack.com/p/app"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/app",
+    "filename": "2025-12-28-app.md"
   },
   {
     "title": "10,000 followers in 17 days.",
+    "subtitle": "Linkedin is easy. So easy I grew this account to 10,000 followers in 17 days, with AI.",
     "date": "2025-12-24",
     "slug": "from-49-to-10000-followers-in-17",
-    "subtitle": "I grew my employee's Linkedin from 49 to 10,000 followers in 17 days, with AI. I recorded everything to show you (exactly) how:",
-    "url": "https://ruben.substack.com/p/from-49-to-10000-followers-in-17"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/from-49-to-10000-followers-in-17",
+    "filename": "2025-12-24-from-49-to-10000-followers-in-17.md"
   },
   {
     "title": "Opus.",
+    "subtitle": "I stop using ChatGPT (because of Opus).",
     "date": "2025-12-21",
     "slug": "opus",
-    "subtitle": "I stop using ChatGPT (because of Opus).",
-    "url": "https://ruben.substack.com/p/opus"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/opus",
+    "filename": "2025-12-21-opus.md"
   },
   {
     "title": "Carousels.",
+    "subtitle": "How to make carousels (for Linkedin), with AI.",
     "date": "2025-12-17",
     "slug": "carousels",
-    "subtitle": "How to make carousels (for Linkedin), with AI.",
-    "url": "https://ruben.substack.com/p/carousels"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/carousels",
+    "filename": "2025-12-17-carousels.md"
   },
   {
     "title": "ChatGPT-5.2",
+    "subtitle": "The new model is out. Is it really better?",
     "date": "2025-12-14",
     "slug": "52",
-    "subtitle": "The new model is out. Is it really better?",
-    "url": "https://ruben.substack.com/p/52"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/52",
+    "filename": "2025-12-14-52.md"
   },
   {
     "title": "Detection.",
+    "subtitle": "AI detection tools are a scam.",
     "date": "2025-12-10",
     "slug": "detection",
-    "subtitle": "AI detection tools are a scam.",
-    "url": "https://ruben.substack.com/p/detection"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/detection",
+    "filename": "2025-12-10-detection.md"
   },
   {
     "title": "Declining.",
+    "subtitle": "ChatGPT is declining. So now, I prefer using this instead:",
     "date": "2025-12-07",
     "slug": "declining",
-    "subtitle": "ChatGPT is declining. So now, I prefer using this instead:",
-    "url": "https://ruben.substack.com/p/declining"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/declining",
+    "filename": "2025-12-07-declining.md"
   },
   {
     "title": "🎙️ Flow.",
+    "subtitle": "Stop typing. Starting talking to your computer.",
     "date": "2025-12-03",
     "slug": "flow",
-    "subtitle": "Stop typing. Starting talking to your computer.",
-    "url": "https://ruben.substack.com/p/flow"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/flow",
+    "filename": "2025-12-03-flow.md"
   },
   {
     "title": "Diagram.",
+    "subtitle": "How to create diagrams with AI.",
     "date": "2025-11-30",
     "slug": "infographic",
-    "subtitle": "How to create diagrams with AI.",
-    "url": "https://ruben.substack.com/p/infographic"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/infographic",
+    "filename": "2025-11-30-infographic.md"
   },
   {
     "title": "Generic.",
+    "subtitle": "How to get out from the ChatGPT generic jail.",
     "date": "2025-11-26",
     "slug": "split",
-    "subtitle": "How to get out from the ChatGPT generic jail.",
-    "url": "https://ruben.substack.com/p/split"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/split",
+    "filename": "2025-11-26-split.md"
   },
   {
     "title": "The $200 ChatGPT model, but for $25.",
+    "subtitle": "How I access the GPT‑5.1 Pro at 12% of the cost.",
     "date": "2025-11-23",
     "slug": "the-200-chatgpt-model-but-for-25",
-    "subtitle": "How I access the GPT‑5.1 Pro at 12% of the cost.",
-    "url": "https://ruben.substack.com/p/the-200-chatgpt-model-but-for-25"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/the-200-chatgpt-model-but-for-25",
+    "filename": "2025-11-23-the-200-chatgpt-model-but-for-25.md"
   },
   {
     "title": "🍌 Pro.",
+    "subtitle": "The new nano-banana-pro is... bananas.",
     "date": "2025-11-21",
     "slug": "banana-2",
-    "subtitle": "The new nano-banana-pro is... bananas.",
-    "url": "https://ruben.substack.com/p/banana-2"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/banana-2",
+    "filename": "2025-11-21-banana-2.md"
   },
   {
     "title": "Context > Prompt.",
+    "subtitle": "Stop prompting like it's 2022.",
     "date": "2025-11-19",
     "slug": "context-is-all-you-need",
-    "subtitle": "Stop prompting like it's 2022.",
-    "url": "https://ruben.substack.com/p/context-is-all-you-need"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/context-is-all-you-need",
+    "filename": "2025-11-19-context-is-all-you-need.md"
   },
   {
     "title": "Custom ChatGPT.",
+    "subtitle": "Stop using the default ChatGPT. Customize it:",
     "date": "2025-11-16",
     "slug": "51",
-    "subtitle": "Stop using the default ChatGPT. Customize it:",
-    "url": "https://ruben.substack.com/p/51"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/51",
+    "filename": "2025-11-16-51.md"
   },
   {
     "title": "Stop paying for AI courses.",
+    "subtitle": "These official courses are already free.",
     "date": "2025-11-12",
     "slug": "free",
-    "subtitle": "These official courses are already free.",
-    "url": "https://ruben.substack.com/p/free"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/free",
+    "filename": "2025-11-12-free.md"
   },
   {
     "title": "Ban.",
+    "subtitle": "Ban these ChatGPT words.",
     "date": "2025-11-09",
     "slug": "delve",
-    "subtitle": "Ban these ChatGPT words.",
-    "url": "https://ruben.substack.com/p/delve"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/delve",
+    "filename": "2025-11-09-delve.md"
   },
   {
     "title": "Train.",
+    "subtitle": "How to train (your) AI on YouTube.",
     "date": "2025-11-05",
     "slug": "youtube",
-    "subtitle": "How to train (your) AI on YouTube.",
-    "url": "https://ruben.substack.com/p/youtube"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/youtube",
+    "filename": "2025-11-05-youtube.md"
   },
   {
     "title": "Too long.",
+    "subtitle": "Your prompt on ChatGPT is too long. Here's the science behind it.",
     "date": "2025-11-02",
     "slug": "long",
-    "subtitle": "Your prompt on ChatGPT is too long. Here's the science behind it.",
-    "url": "https://ruben.substack.com/p/long"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/long",
+    "filename": "2025-11-02-long.md"
   },
   {
     "title": "You.",
+    "subtitle": "How to train ChatGPT to write like you.",
     "date": "2025-10-29",
     "slug": "emdash",
-    "subtitle": "How to train ChatGPT to write like you.",
-    "url": "https://ruben.substack.com/p/emdash"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/emdash",
+    "filename": "2025-10-29-emdash.md"
   },
   {
     "title": "Joking.",
+    "subtitle": "On why ChatGPT, Gemini and Claude give you the same joke (and what to do instead)",
     "date": "2025-10-26",
     "slug": "same",
-    "subtitle": "On why ChatGPT, Gemini and Claude give you the same joke (and what to do instead)",
-    "url": "https://ruben.substack.com/p/same"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/same",
+    "filename": "2025-10-26-same.md"
   },
   {
     "title": "Atlas.",
+    "subtitle": "The new ChatGPT Atlas browser is live. Is it (really) better than Chrome?",
     "date": "2025-10-22",
     "slug": "atlas",
-    "subtitle": "The new ChatGPT Atlas browser is live. Is it (really) better than Chrome?",
-    "url": "https://ruben.substack.com/p/atlas"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/atlas",
+    "filename": "2025-10-22-atlas.md"
   },
   {
     "title": "Rude.",
+    "subtitle": "Be rude to ChatGPT. It makes it better.",
     "date": "2025-10-19",
     "slug": "sorry",
-    "subtitle": "Be rude to ChatGPT. It makes it better.",
-    "url": "https://ruben.substack.com/p/sorry"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/sorry",
+    "filename": "2025-10-19-sorry.md"
   },
   {
     "title": "Anything.",
+    "subtitle": "How I master 80% of (virtually) anything. Using AI.",
     "date": "2025-10-12",
     "slug": "master",
-    "subtitle": "How I master 80% of (virtually) anything. Using AI.",
-    "url": "https://ruben.substack.com/p/master"
-  },
-  {
-    "title": "Paid",
-    "date": "2025-10-09",
-    "slug": "upgrade",
-    "subtitle": "If AI still feels like something only others are good at, start here. 2 emails a week. Each one is a step-by-step workflow anyone can follow, with screenshots. Useful the same day you read it. Subscribe for free below.",
-    "url": "https://ruben.substack.com/p/upgrade"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/master",
+    "filename": "2025-10-12-master.md"
   },
   {
     "title": "Search.",
+    "subtitle": "How to (best) search with AI. PS: it's not with ChatGPT.",
     "date": "2025-10-05",
     "slug": "search",
-    "subtitle": "How to (best) search with AI. PS: it's not with ChatGPT.",
-    "url": "https://ruben.substack.com/p/search"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/search",
+    "filename": "2025-10-05-search.md"
   },
   {
     "title": "Video.",
+    "subtitle": "AI (now) makes (good) videos.",
     "date": "2025-09-28",
     "slug": "video",
-    "subtitle": "AI (now) makes (good) videos.",
-    "url": "https://ruben.substack.com/p/video"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/video",
+    "filename": "2025-09-28-video.md"
   },
   {
     "title": "Prompt.",
+    "subtitle": "ChatGPT just revealed (exactly) what people prompt. It's a gold mine.",
     "date": "2025-09-21",
     "slug": "gold",
-    "subtitle": "ChatGPT just revealed (exactly) what people prompt. It's a gold mine.",
-    "url": "https://ruben.substack.com/p/gold"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/gold",
+    "filename": "2025-09-21-gold.md"
   },
   {
     "title": "Vibe.",
+    "subtitle": "How to vibe code (without any code).",
     "date": "2025-09-14",
     "slug": "vibing",
-    "subtitle": "How to vibe code (without any code).",
-    "url": "https://ruben.substack.com/p/vibing"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/vibing",
+    "filename": "2025-09-14-vibing.md"
   },
   {
     "title": "Image.",
+    "subtitle": "AI make images. But only one AI is right for you.",
     "date": "2025-09-07",
     "slug": "imagine",
-    "subtitle": "AI makes images. But only one is right for you.",
-    "url": "https://ruben.substack.com/p/imagine"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/imagine",
+    "filename": "2025-09-07-imagine.md"
   },
   {
     "title": "Restore.",
+    "subtitle": "I restore my grandma's 1960s photo & animated it with AI. Here's how:",
     "date": "2025-08-31",
     "slug": "grandma",
-    "subtitle": "I restore my grandma's 1960s photo & animated it with AI. Here's how:",
-    "url": "https://ruben.substack.com/p/grandma"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/grandma",
+    "filename": "2025-08-31-grandma.md"
   },
   {
     "title": "Banana.",
+    "subtitle": "The new & best AI for images. Yes, it's better than ChatGPT.",
     "date": "2025-08-28",
     "slug": "banana",
-    "subtitle": "The new & best AI for images. Yes, it's better than ChatGPT.",
-    "url": "https://ruben.substack.com/p/banana"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/banana",
+    "filename": "2025-08-28-banana.md"
   },
   {
     "title": "Sins.",
+    "subtitle": "The 7 Deadly Sins of Prompting.",
     "date": "2025-08-24",
     "slug": "the-7-deadly-sins-of-prompting",
-    "subtitle": "And how to fix a bad prompt.",
-    "url": "https://ruben.substack.com/p/the-7-deadly-sins-of-prompting"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/the-7-deadly-sins-of-prompting",
+    "filename": "2025-08-24-the-7-deadly-sins-of-prompting.md"
   },
   {
     "title": "Start.",
+    "subtitle": "How to start with AI.",
     "date": "2025-08-19",
     "slug": "start",
-    "subtitle": "How (& where) to start with AI.",
-    "url": "https://ruben.substack.com/p/start"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/start",
+    "filename": "2025-08-19-start.md"
   },
   {
     "title": "Consultants.",
+    "subtitle": "Exactly how to replace consultants with AI.",
     "date": "2025-08-17",
     "slug": "consulting",
-    "subtitle": "How AI is eating up consulting.",
-    "url": "https://ruben.substack.com/p/consulting"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/consulting",
+    "filename": "2025-08-17-consulting.md"
   },
   {
     "title": "Business.",
+    "subtitle": "How to prompt ChatGPT to create a business plan.",
     "date": "2025-08-14",
     "slug": "business-plan",
-    "subtitle": "How to prompt ChatGPT to create a business plan.",
-    "url": "https://ruben.substack.com/p/business-plan"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/business-plan",
+    "filename": "2025-08-14-business-plan.md"
   },
   {
     "title": "10,000 followers.",
+    "subtitle": "How to get your first 10,000 followers on Linkedin. Using AI.",
     "date": "2025-08-10",
     "slug": "linkedin",
-    "subtitle": "How to go from 0 to 10,000 followers on Linkedin, with AI.",
-    "url": "https://ruben.substack.com/p/linkedin"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/linkedin",
+    "filename": "2025-08-10-linkedin.md"
   },
   {
     "title": "5.",
+    "subtitle": "The new ChatGPT 5 is accessible. But is it better?",
     "date": "2025-08-08",
     "slug": "chatgpt-5",
-    "subtitle": "The new ChatGPT-5 is out. Is it (really) better?",
-    "url": "https://ruben.substack.com/p/chatgpt-5"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/chatgpt-5",
+    "filename": "2025-08-08-chatgpt-5.md"
   },
   {
-    "title": "Spend.",
+    "title": "How much should you spend on AI?",
+    "subtitle": "$20? $200? $2,000? October 2025 benchmark.",
     "date": "2025-08-03",
     "slug": "spend",
-    "subtitle": "How much should you spend on AI? August 2025 benchmark.",
-    "url": "https://ruben.substack.com/p/spend"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/spend",
+    "filename": "2025-08-03-spend.md"
   },
   {
-    "title": "Setup.",
+    "title": "How to (actually) set up your ChatGPT.",
+    "subtitle": "No one gave you the correct settings before using ChatGPT. So I will.",
     "date": "2025-07-27",
     "slug": "settings",
-    "subtitle": "No one gave you the correct settings before using ChatGPT. So I will.",
-    "url": "https://ruben.substack.com/p/settings"
+    "audience": "paid",
+    "url": "https://ruben.substack.com/p/settings",
+    "filename": "2025-07-27-settings.md"
   },
   {
     "title": "16 chatgpt myths.",
+    "subtitle": "No, ChatGPT does not 'read' the entire internet.",
     "date": "2025-07-20",
     "slug": "16-chatgpt-myths",
-    "subtitle": "No, ChatGPT does not 'read' the entire internet.",
-    "url": "https://ruben.substack.com/p/16-chatgpt-myths"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/16-chatgpt-myths",
+    "filename": "2025-07-20-16-chatgpt-myths.md"
   },
   {
-    "title": "How AI powers F1 (+ you).",
+    "title": "How Formula 1 uses AI (& why it matters to you).",
+    "subtitle": "Formula 1 runs on AI. So should you.",
     "date": "2025-07-13",
     "slug": "f1",
-    "subtitle": "F1 runs on AI. So should you.",
-    "url": "https://ruben.substack.com/p/f1"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/f1",
+    "filename": "2025-07-13-f1.md"
   },
   {
-    "title": "How to context engineering ChatGPT.",
+    "title": "How to prompt ChatGPT with context engineering.",
+    "subtitle": "The right context beats the right prompt.",
     "date": "2025-07-06",
     "slug": "context",
-    "subtitle": "The right context beats the right prompt.",
-    "url": "https://ruben.substack.com/p/context"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/context",
+    "filename": "2025-07-06-context.md"
   },
   {
     "title": "How to train your own ChatGPT.",
+    "subtitle": "A step-by-step guide to Custom GPTs.",
     "date": "2025-06-29",
     "slug": "how-to-train-your-own-chatgpt",
-    "subtitle": "A step-by-step guide to Custom GPTs.",
-    "url": "https://ruben.substack.com/p/how-to-train-your-own-chatgpt"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/how-to-train-your-own-chatgpt",
+    "filename": "2025-06-29-how-to-train-your-own-chatgpt.md"
   },
   {
     "title": "How ChatGPT makes you dumb.",
+    "subtitle": "But only if you make this mistake (& how to avoid it).",
     "date": "2025-06-22",
     "slug": "how-chatgpt-makes-you-dumb",
-    "subtitle": "But only if you make this mistake (& how to avoid it).",
-    "url": "https://ruben.substack.com/p/how-chatgpt-makes-you-dumb"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/how-chatgpt-makes-you-dumb",
+    "filename": "2025-06-22-how-chatgpt-makes-you-dumb.md"
   },
   {
     "title": "How to make AI battle for you.",
+    "subtitle": "A step-by-step guide to make ChatGPT & Claude fight for truth.",
     "date": "2025-06-15",
     "slug": "fight",
-    "subtitle": "A step-by-step guide to make ChatGPT & Claude fight for truth.",
-    "url": "https://ruben.substack.com/p/fight"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/fight",
+    "filename": "2025-06-15-fight.md"
   },
   {
-    "title": "Prompt Maker.",
+    "title": "How to not prompt.",
+    "subtitle": "But use the Prompt Maker instead.",
     "date": "2025-06-08",
     "slug": "prompt-maker",
-    "subtitle": "The prompt to make better prompts.",
-    "url": "https://ruben.substack.com/p/prompt-maker"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/prompt-maker",
+    "filename": "2025-06-08-prompt-maker.md"
   },
   {
-    "title": "Socrates & AI.",
+    "title": "How Socrates prompts ChatGPT.",
+    "subtitle": "Self-Ask Prompting - or the Socratic way of prompting ChatGPT.",
     "date": "2025-06-01",
     "slug": "socrates-and-ai",
-    "subtitle": "Self-Ask Prompting - or the Socratic way of prompting ChatGPT.",
-    "url": "https://ruben.substack.com/p/socrates-and-ai"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/socrates-and-ai",
+    "filename": "2025-06-01-socrates-and-ai.md"
   },
   {
     "title": "How fast AI moves.",
+    "subtitle": "People think they know AI, but they are talking about an AI of the past.",
     "date": "2025-05-25",
     "slug": "past",
-    "subtitle": "People think they know AI, but they are talking about an AI of the past.",
-    "url": "https://ruben.substack.com/p/past"
+    "audience": "free",
+    "url": "https://ruben.substack.com/p/past",
+    "filename": "2025-05-25-past.md"
   }
 ]

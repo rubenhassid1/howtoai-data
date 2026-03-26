@@ -3,6 +3,7 @@ title: "16 chatgpt myths."
 date: 2025-07-20
 slug: 16-chatgpt-myths
 subtitle: "No, ChatGPT does not 'read' the entire internet."
+audience: free
 url: https://ruben.substack.com/p/16-chatgpt-myths
 ---
 
@@ -20,10 +21,26 @@ It’s time to debunk all of them. One by one.
 
 1- You need to toggle its search feature to have access to the internet.
 
-[
-![What are "tokens" in LLMs ?](https://substackcdn.com/image/fetch/$s_!w2l2!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8a584d9-6bae-4a01-b5c3-2331c78e3bcf_670x178.png)
+![](https://substack-post-media.s3.amazonaws.com/public/images/58e01436-03b0-4885-ad8b-c3c50490ae96_2244x1150.png)
 
-](https://substackcdn.com/image/fetch/$s_!D-KC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58e01436-03b0-4885-ad8b-c3c50490ae96_2244x1150.png)
+2- Even if you toggle it, it only goes through the first links to read some content (that you can hardly control, unless you shared a specific link).
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/bc5f7788-308f-4c0a-ad93-b1f0e05f0399_2144x610.png)
+
+3- And if you don’t toggle it, it simply go through its training data (mostly books, wikipedia, reddit, youtube videos transcript, papers…). It’s a lot of the internet, but **not** the entire internet, until **June 2024**.
+
+Also, you have to “call” its data with the right prompt (*hence why people love prompts*). For eg. if you say “Act like a data engineer”, ChatGPT will directly go to its “data engineer database”. The answer will be instantly better.
+
+## #2 “ChatGPT remembers everything.”
+
+**Debunk**: ChatGPT has a memory limit (but it gets better).
+
+A chat forgets anything outside the ~100,000-token context.
+
+A token is part of a word.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/b8a584d9-6bae-4a01-b5c3-2331c78e3bcf_670x178.png)
+
 Here on this image, every change of color is a new token.
 
 So **100,000 tokens** is equal to a ~**300-page book**.
@@ -32,16 +49,43 @@ But there is a trick to get much more memory from ChatGPT.
 
 You must turn on its “**Memory**” feature.
 
-[
-![How to make AI battle for you.](https://substackcdn.com/image/fetch/$s_!_-sB!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde4a1c83-4f19-4e99-8a61-c93503e38aa3_1260x900.png)
+![](https://substack-post-media.s3.amazonaws.com/public/images/479919f3-477d-45ea-8e24-f81afbff7deb_1716x1516.png)
 
-#### How to make AI battle for you.
-Ruben Hassid](https://substackcdn.com/image/fetch/$s_!E8Fr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F479919f3-477d-45ea-8e24-f81afbff7deb_1716x1516.png)
-·
-June 15, 2025
+When you go in your settings, you must turn on the right ones.
 
-[Read full story
-](https://ruben.substack.com/p/fight)
+Next week will be my first edition of my paid Substack, and this will be the topic: **“How to set up (properly) your ChatGPT.”**
+
+You want to be in? Leave a comment to show some support.
+
+[Leave a comment](https://ruben.substack.com/p/16-chatgpt-myths/comments)
+
+And if you happen to not be a subscriber, here’s a one-click opt-in:
+
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
+## #3 “ChatGPT never lies.”
+
+**Debunk**: ChatGPT (and nearly every other AI) hallucinates.
+
+To hallucinate for an AI is to simply fabricate data.
+
+1- It predicts the next token, not the next fact. When the data gap is big, it fills the void with fiction. Fiction can be wrong. It’s not ChatGPT’s roles to know the difference (until you prompt it to check with sources).
+
+2- It can invent sources, quotes, even entire studies. Confidence ≠ truth.
+
+3- Treat every reply as a first draft. Verify, cross‑check, then polish.
+
+## #4 “ChatGPT is unbiased.”
+
+**Debunk**: If the training data is bad, it will be amplified.
+
+1- Training data is the open internet. Packed with cultural, political, and historical bias.
+
+2- Reinforcement learning fine‑tunes behavior, but humans (with their own bias) set the rules.
+
+3- Use multiple prompts and perspectives to detect blind spots.
+
+I wrote a blog about “confirmation bias”:
 
 ## #5 “ChatGPT understands humor.”
 
@@ -133,11 +177,11 @@ I wish such tool existed.
 
 Side note, but I can’t wait to use the new Perplexity Comet.
 
-It’s a new AI browser that wants to compete with Google Chrome. 
+It’s a new AI browser that wants to compete with Google Chrome.
 
 It’s time to step up the very thing we’re using for hours every day.
 
-Plus I love Perplexity. 
+Plus I love Perplexity.
 
 Not an ad, but if Perplexity hears me, please pay me. Thanks.
 
@@ -151,53 +195,38 @@ And it’s a terrible thing when people fall in love with AI.
 
 I don’t want to live in the movie **Her**. But we’re heading there.
 
-## #15 “ChatGPT can’t harm you.” 
+## #15 “ChatGPT can’t harm you.”
 
-**Debunk**: ChatGPT psychosis is real. 
+**Debunk**: ChatGPT psychosis is real.
 
 People get validated in their own world’s vision until reaching total psychosis & paranoia. Remember it as a tool, a very smart intern (that can turn into a parrot).
 
 Someone just got spiraled into it recently on X:
 
-Check this thread if you’re interested, but it’s not for the faint of heart: [https://x.com/max_spero_/status/1945896467169722812](https://x.com/max_spero_/status/1945896467169722812).
+Check this thread if you’re interested, but it’s not for the faint of heart: https://x.com/max_spero_/status/1945896467169722812.
 
 ## #16 “ChatGPT makes you dumb.”
 
 **Debunk**: I wrote an entire blog about it.
 
-[
-![How ChatGPT makes you dumb.](https://substackcdn.com/image/fetch/$s_!Eiyx!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82c4002e-507f-422d-b363-387f9e7e4c90_1600x900.png)
-
-#### How ChatGPT makes you dumb.
-Ruben Hassid](https://ruben.substack.com/p/how-chatgpt-makes-you-dumb)
-·
-June 22, 2025
-
-[Read full story
-](https://ruben.substack.com/p/how-chatgpt-makes-you-dumb)
-
 ---
 
 You reached the end of this Sunday’s newsletter.
 
-Note from the author: I absolutely love writing it. 
+Note from the author: I absolutely love writing it.
 
 It’s easily the favorite part of my week!
 
-[
-![](https://substackcdn.com/image/fetch/$s_!hLzE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f3db052-fd8a-4c43-992b-8467ea013300_7436x4958.jpeg)
+![](https://substack-post-media.s3.amazonaws.com/public/images/4f3db052-fd8a-4c43-992b-8467ea013300_7436x4958.jpeg)
 
-](https://substackcdn.com/image/fetch/$s_!hLzE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f3db052-fd8a-4c43-992b-8467ea013300_7436x4958.jpeg)
 *(Yes, I am real)*
 
 I want to take a second to thank each & every one of you.
 
 Our “**How to AI**” newsletter is exploding!
 
-[
-![](https://substackcdn.com/image/fetch/$s_!9n4J!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94cff03c-e2e2-4ccb-bddc-222e3ffb4f7d_2294x1266.png)
+![](https://substack-post-media.s3.amazonaws.com/public/images/94cff03c-e2e2-4ccb-bddc-222e3ffb4f7d_2294x1266.png)
 
-](https://substackcdn.com/image/fetch/$s_!9n4J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94cff03c-e2e2-4ccb-bddc-222e3ffb4f7d_2294x1266.png)
 People want to master AI with words, not code. Just like me.
 
 That’s why I want to give you more. **Much more.**
@@ -216,11 +245,13 @@ So starting next week, I will turn this newsletter into a paid one:
 
 2 - The paid part is a weekly video walkthrough of me making a video course of the newsletter. Paying would give you access to all of the past, present & future video courses I will ever record. **Expect my most advanced & hands-on video.**
 
-PS: Someone might have forwarded this email to you. 
+PS: Someone might have forwarded this email to you.
 
-First, I’d love to personally thank this person! 
+First, I’d love to personally thank this person!
 
 Second, make sure to never miss a guide:
+
+[Subscribe now](https://ruben.substack.com/subscribe?)
 
 Humanly yours, Ruben.
 

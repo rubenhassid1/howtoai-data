@@ -2,37 +2,31 @@
 title: "Cowork."
 date: 2026-03-05
 slug: claude-cowork
-subtitle: "How to set up Claude Cowork (once you're ready to level up from ChatGPT):"
+subtitle: "How to set up Claude (to level up from ChatGPT):"
+audience: free
 url: https://ruben.substack.com/p/claude-cowork
 ---
 
 You just switched from ChatGPT to Claude. But you’re still not using **Cowork**.
 
-When Claude released it, software stocks lost $830 billion in 6 days because of it. 
+When Claude released it, software stocks lost $830 billion in 6 days because of it.
 
 And since I published my guide ‘**[Claude](https://ruben.substack.com/p/claude)’** (my most-shared newsletter I’ve ever written, over +2,000 shares), people keep asking me:
 
-> *“I installed Claude. But how do I actually start using Claude Cowork?”*
+> “I installed Claude. But how do I actually start using Claude Cowork?”
+
 **If you don’t code, you must master Claude Cowork now.**
 
 First, you might be lost between different Claude modes. So here’s a quick recap:
 
-[
-![](https://substackcdn.com/image/fetch/$s_!nn_K!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ccd0a31-08ab-493e-8701-c0e2114dd704_1080x1350.png)
+![Claude Cowork is (by far) what you must focus on right now.](https://substack-post-media.s3.amazonaws.com/public/images/8ccd0a31-08ab-493e-8701-c0e2114dd704_1080x1350.png)
+*Claude Cowork is (by far) what you must focus on right now.*
 
-](https://substackcdn.com/image/fetch/$s_!nn_K!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ccd0a31-08ab-493e-8701-c0e2114dd704_1080x1350.png)*Claude Cowork is (by far) what you must focus on right now.*
-
-And that’s not it. 
+And that’s not it.
 
 Here’s the entire Claude product line, in short:
 
-1. **Claude “Chat”** → it’s like ChatGPT. Probably the only one you know.
-2. **Claude “Project”** → it’s still Claude Chat, but separated as individual Projects.
-3. **Claude “Code”** → massive revolution for developers to code (much) faster.
-4. **Claude “Cowork”** → like Claude Code but for us, knowledge workers.
-5. **Claude “Skills”** → teach Claude repeatable workflows. Like better Projects.
-6. **Claude “Connectors”** → plug Claude directly into apps like Slack, Google Calendar, Gmail, etc. It reads, writes, and acts inside the tools you already use.
-7. **Claude “Plugins”** → like Connectors, but you do it (you don’t want that). Connectors = download from the App Store, Plugins = you upload your app.
+1. Claude “Chat” → it’s like ChatGPT. Probably the only one you know.2. Claude “Project” → it’s still Claude Chat, but separated as individual Projects.3. Claude “Code” → massive revolution for developers to code (much) faster.4. Claude “Cowork” → like Claude Code but for us, knowledge workers.5. Claude “Skills” → teach Claude repeatable workflows. Like better Projects.6. Claude “Connectors” → plug Claude directly into apps like Slack, Google Calendar, Gmail, etc. It reads, writes, and acts inside the tools you already use.7. Claude “Plugins” → like Connectors, but you do it (you don’t want that). Connectors = download from the App Store, Plugins = you upload your app.
 
 This newsletter is the full playbook of Cowork. How to set it up. How I use it every single week to write this newsletter, deliver consulting work, and research faster than I ever could alone. Also, where it falls short *(I keep promising honesty)*.
 
@@ -46,50 +40,43 @@ Two things before we start:
 
 ---
 
-## **You must forget about prompts.**
+## You must forget about prompts.
 
 You read my **[Claude](https://ruben.substack.com/p/claude)** guide. So you installed it correctly.
 
 Just a quick reminder for those who didn’t read it:
 
-1. Go to [claude.com/download](https://claude.com/download). Download the app.
-2. You need a Pro account ($20/month). It’s very much worth it.
-3. Open the app. Click on the **Cowork** tab at the top between Chat & Code.
-4. Select a folder from your computer. More about it right after this set up.
-5. Make sure to always select “**Opus 4.6**” and “**Extended thinking**”.
+1. Go to claude.com/download. Download the app.2. You need a Pro account ($20/month). It’s very much worth it.3. Open the app. Click on the Cowork tab at the top between Chat & Code.4. Select a folder from your computer. More about it right after this set up.5. Make sure to always select “Opus 4.6” and “Extended thinking”.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!_nQe!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc79bd46d-b3d0-442f-a1e7-107087a79154_3456x2170.png)
-
-](https://substackcdn.com/image/fetch/$s_!_nQe!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc79bd46d-b3d0-442f-a1e7-107087a79154_3456x2170.png)*This is the Claude app (installed on your computer). Make sure to go to the Cowork tab > Select Opus 4.6 + Extended thinking > Work in a folder.*
+![This is the Claude app (installed on your computer). Make sure to go to the Cowork tab > Select Opus 4.6 + Extended thinking > Work in a folder.](https://substack-post-media.s3.amazonaws.com/public/images/c79bd46d-b3d0-442f-a1e7-107087a79154_3456x2170.png)
+*This is the Claude app (installed on your computer). Make sure to go to the Cowork tab > Select Opus 4.6 + Extended thinking > Work in a folder.*
 
 ChatGPT trained you to write better prompts. Longer prompts. Forget that.
 
 With Cowork, the game is text files. Take everything you know (your writing style, your company’s rules, your best examples, your past work) and put it in text files. Drop them in a folder. Point Claude to that folder.
 
-It’s kind of like having an SOP for an employee. But here, Claude is your employee. And the SOP is your “Claude Cowork” folder. 
+It’s kind of like having an SOP for an employee. But here, Claude is your employee. And the SOP is your “Claude Cowork” folder.
 
 The more context you give it as files, the less prompting you need. The output goes from *“generic AI”* to *“this actually sounds like a full-time employee.” *
 
 Here’s how to create your folder:
 
-#### **Step 1: Build your folder.**
+#### Step 1: Build your folder.
 
-Create a dedicated folder for Cowork on your computer. 
+Create a dedicated folder for Cowork on your computer.
 
 It needs a clean, intentional space. Here’s mine:
 
-> **ABOUT ME** → a folder with 1/ “**about me**”, 2/ “**anti AI writing style”.****PROJECTS** → live work. The **projects** you're building right now. The brief, the drafts, the reference material for that specific job. one subfolder per project. **TEMPLATES** → finished work so good you want to reuse it as a pattern. It’s not the content itself, but the “perfect” structure, as **templates**.**CLAUDE OUTPUTS** → where Claude Cowork delivers finished work for you.
-[
-![](https://substackcdn.com/image/fetch/$s_!n566!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F314ceb03-f846-4869-b242-be7f165bf44d_1746x1162.png)
+> ABOUT ME → a folder with 1/ “about me”, 2/ “anti AI writing style”.PROJECTS → live work. The projects you're building right now. The brief, the drafts, the reference material for that specific job. one subfolder per project. TEMPLATES → finished work so good you want to reuse it as a pattern. It’s not the content itself, but the “perfect” structure, as templates.CLAUDE OUTPUTS → where Claude Cowork delivers finished work for you.
 
-](https://substackcdn.com/image/fetch/$s_!n566!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F314ceb03-f846-4869-b242-be7f165bf44d_1746x1162.png)*Parent folder: CLAUDE COWORK. Inside, there are 4x folders (1-2-3-4).*
+![Parent folder: CLAUDE COWORK. Inside, there are 4x folders (1-2-3-4).](https://substack-post-media.s3.amazonaws.com/public/images/314ceb03-f846-4869-b242-be7f165bf44d_1746x1162.png)
+*Parent folder: CLAUDE COWORK. Inside, there are 4x folders (1-2-3-4).*
 
 This keeps things organized and limits what Claude can see. Cowork has real read/write access to whatever folder you share. If something goes wrong, you want the damage contained. You must keep it tight.
 
 Now here’s how to create your own core files:
 
-#### **Step 2: Create your core files.**
+#### Step 2: Create your core files.
 
 You now have 4 folders within your mega “Claude Cowork” folder.
 
@@ -99,37 +86,33 @@ Let’s create the “About me” files now:
 
 **File 2: anti-ai-writing-style.md** — Because I hate the AI style. So I made a text file on how to NEVER write like an AI. I share how to download it below.
 
-Download my 3x md files by **[subscribing](https://ruben.substack.com/subscribe)** to my newsletter for free. **Do not pay for anything.** Open my welcome email & you will access my Notion doc with md files.
+Download my 3x md files by **[subscribing](https://ruben.substack.com/subscribe)** to my newsletter for free. **Do not pay for anything.** Open my welcome email & you will access my Notion doc with md files.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!QVZs!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffb85e71a-59ba-4944-84d5-d513bb336ffc_1920x1080.jpeg)
+![1 - Leave your email 2 - Select “None” to not pay 3 - Open the welcome email to confirm your subscription 4 - Receive my prompt & md files entire library.](https://substack-post-media.s3.amazonaws.com/public/images/fb85e71a-59ba-4944-84d5-d513bb336ffc_1920x1080.jpeg)
+*1 - Leave your email 2 - Select “None” to not pay 3 - Open the welcome email to confirm your subscription 4 - Receive my prompt & md files entire library.*
 
-](https://substackcdn.com/image/fetch/$s_!QVZs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffb85e71a-59ba-4944-84d5-d513bb336ffc_1920x1080.jpeg)***1 -** Leave your email **2 -** Select “None” to not pay **3 -** Open the welcome email to confirm your subscription **4 -** Receive my prompt & md files entire library. *
+> If you are free subscribers already, and can’t find this email, leave a comment.
 
-> **If you are free subscribers already, and can’t find this email, leave a comment.**
 Quick note: a markdown file is just a plain text file with an .md extension. Open any text editor *(even a Google Doc works)*, write your content, and save it as **about-me.md** instead of about-me.txt. Claude reads them better.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!URqo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71bdb23f-8943-4019-8f65-463b9871106a_3456x1920.png)
+![“.md” is just a type of text file AI loves to read.](https://substack-post-media.s3.amazonaws.com/public/images/71bdb23f-8943-4019-8f65-463b9871106a_3456x1920.png)
+*“.md” is just a type of text file AI loves to read.*
 
-](https://substackcdn.com/image/fetch/$s_!URqo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71bdb23f-8943-4019-8f65-463b9871106a_3456x1920.png)*“.md” is just a type of text file AI loves to read.*
+One great markdown file is worth more than 50 random uploads. Don’t dump everything into the folder. Be intentional about what you include.
 
-One great markdown file is worth more than 50 random uploads. Don’t dump everything into the folder. Be intentional about what you include. 
-
-#### **Step 3: Set Global Instructions.**
+#### Step 3: Set Global Instructions.
 
 Go to: **Settings → Cowork → Edit Global Instructions**.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!MWQS!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54746d4b-e465-4b8a-a8a3-bdcc16678a48_3456x2170.png)
-
-](https://substackcdn.com/image/fetch/$s_!MWQS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54746d4b-e465-4b8a-a8a3-bdcc16678a48_3456x2170.png)*It’s like a persistent prompt Claude Cowork always read before.*
+![It’s like a persistent prompt Claude Cowork always read before.](https://substack-post-media.s3.amazonaws.com/public/images/54746d4b-e465-4b8a-a8a3-bdcc16678a48_3456x2170.png)
+*It’s like a persistent prompt Claude Cowork always read before.*
 
 Global Instructions handle how Claude must (always) behave.
 
 Paste this:
 
-# GLOBAL INSTRUCTIONS
+```
+`# GLOBAL INSTRUCTIONS
 
 ## BEFORE EVERY TASK
 
@@ -168,106 +151,111 @@ Increment the version number if a file with the same name already exists.
 
 - If the brief is unclear or incomplete, use the `AskUserQuestion` tool. Don't fill gaps with generic filler.
 - Don't over-explain. Deliver the work. Save the commentary unless I ask for it.
-- Never delete files anywhere.You set this once. It runs every time. You never type it again.
+- Never delete files anywhere.`
+```
+
+You set this once. It runs every time. You never type it again.
 
 Combined with your context files, this means your prompts can be 10 words long and still produce work that sounds like you. With the same level of quality.
 
 Here’s a prompt example:
 
-I want to write a cold DM on Linkedin to a Chief of Staff who needs an AI workshop.
+```
+`I want to write a cold DM on Linkedin to a Chief of Staff who needs an AI workshop.
 
 I will DM her on Linkedin, and I need to have a clear strategy to make her open the message and book a call. 
 
-Start by using AskUserQuestion. Develop 5x completely different strategies.[
-![](https://substackcdn.com/image/fetch/$s_!XrSl!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe966464e-69b3-4253-a39e-d605169d34dd_3456x2166.png)
+Start by using AskUserQuestion. Develop 5x completely different strategies.`
+```
 
-](https://substackcdn.com/image/fetch/$s_!XrSl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe966464e-69b3-4253-a39e-d605169d34dd_3456x2166.png)*1. Use Cowork 2. Select your Claude folder 3. Select the right model 4. Straightforward prompt with the task + success critera + steps.*
+![1. Use Cowork 2. Select your Claude folder 3. Select the right model 4. Straightforward prompt with the task + success critera + steps.](https://substack-post-media.s3.amazonaws.com/public/images/e966464e-69b3-4253-a39e-d605169d34dd_3456x2166.png)
+*1. Use Cowork 2. Select your Claude folder 3. Select the right model 4. Straightforward prompt with the task + success critera + steps.*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!l4nV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd399f65c-e430-4df5-8541-23d15d25671c_3456x2166.png)
+![Claude Cowork asked me clarifying questions, and I clicked on my answers.](https://substack-post-media.s3.amazonaws.com/public/images/d399f65c-e430-4df5-8541-23d15d25671c_3456x2166.png)
+*Claude Cowork asked me clarifying questions, and I clicked on my answers.*
 
-](https://substackcdn.com/image/fetch/$s_!l4nV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd399f65c-e430-4df5-8541-23d15d25671c_3456x2166.png)*Claude Cowork asked me clarifying questions, and I clicked on my answers.*
+![It works like an employee to complete the task.](https://substack-post-media.s3.amazonaws.com/public/images/26605f25-9a09-499a-a26d-1d21c91864a6_3456x2170.png)
+*It works like an employee to complete the task.*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!hb5K!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26605f25-9a09-499a-a26d-1d21c91864a6_3456x2170.png)
-
-](https://substackcdn.com/image/fetch/$s_!hb5K!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26605f25-9a09-499a-a26d-1d21c91864a6_3456x2170.png)*It works like an employee to complete the task.*
-
-[
-![](https://substackcdn.com/image/fetch/$s_!SZVY!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54263314-e8bf-43e6-b8dc-20dd96bb6fc5_3456x2166.png)
-
-](https://substackcdn.com/image/fetch/$s_!SZVY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54263314-e8bf-43e6-b8dc-20dd96bb6fc5_3456x2166.png)*It takes 1-7 minutes, but I usually work somewhere else (or spin up more sessions on my browser with Claude Chat - welcome to the new world).*
-
+![It takes 1-7 minutes, but I usually work somewhere else (or spin up more sessions on my browser with Claude Chat - welcome to the new world).](https://substack-post-media.s3.amazonaws.com/public/images/54263314-e8bf-43e6-b8dc-20dd96bb6fc5_3456x2166.png)
+*It takes 1-7 minutes, but I usually work somewhere else (or spin up more sessions on my browser with Claude Chat - welcome to the new world).*
+[Video]
 This level of output is literally what a good employee would do.
 
 Now extrapolate to legal work, creative agencies, academic research.
 
-You might think it was “too simple of a benchmark”. 
+You might think it was “too simple of a benchmark”.
 
 Alright, let’s do another example. A heavy Excel file together:
 
-I want to create a spreadsheet that maps out a potential exit for my socials (if I could sell them). Start by using AskUserQuestion to be up to date with my numbers.
+```
+`I want to create a spreadsheet that maps out a potential exit for my socials (if I could sell them). Start by using AskUserQuestion to be up to date with my numbers.
 
-Then and only then, create a spreadsheet with Wall Street financial model style.[
-![](https://substackcdn.com/image/fetch/$s_!nP9I!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff720aff6-2ee6-4a29-99da-6f363c52b129_3456x2164.png)
+Then and only then, create a spreadsheet with Wall Street financial model style.`
+```
 
-](https://substackcdn.com/image/fetch/$s_!nP9I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff720aff6-2ee6-4a29-99da-6f363c52b129_3456x2164.png)*It plans itself. It finds error itself. It fixes itself… while I work on something else. This is the revolution I was mentioning earlier.*
+![It plans itself. It finds error itself. It fixes itself… while I work on something else. This is the revolution I was mentioning earlier.](https://substack-post-media.s3.amazonaws.com/public/images/f720aff6-2ee6-4a29-99da-6f363c52b129_3456x2164.png)
+*It plans itself. It finds error itself. It fixes itself… while I work on something else. This is the revolution I was mentioning earlier.*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!DNgf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4162ffbc-0e02-413a-b1fc-bf26bf576109_3456x2170.png)
-
-](https://substackcdn.com/image/fetch/$s_!DNgf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4162ffbc-0e02-413a-b1fc-bf26bf576109_3456x2170.png)*Few question, 2 minutes. And I have a perfect start to an Excel file.*
+![Few question, 2 minutes. And I have a perfect start to an Excel file.](https://substack-post-media.s3.amazonaws.com/public/images/4162ffbc-0e02-413a-b1fc-bf26bf576109_3456x2170.png)
+*Few question, 2 minutes. And I have a perfect start to an Excel file.*
 
 If you’re curious about the one-shot results (I didn’t change anything from its first answer), go here: https://docs.google.com/spreadsheets/d/1WkUTtE41zdHT616a2zLxLtoC79Zvv_wZDLJGi5tr_Fk/edit?usp=sharing.
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **Don’t prompt Claude. Let it prompt you.**
+## Don’t prompt Claude. Let it prompt you.
 
 This is the feature that changed how I work. And I haven’t seen a single Cowork guide explain it properly.
 
 Always add this to your prompt:
 
-Start by using the AskUserQuestion tool before answering to gather enough context.When you do this, Cowork generates an interactive form. Actual buttons. Clickable options. Multi-select choices. Rankings you can drag and reorder. 
+```
+`Start by using the AskUserQuestion tool before answering to gather enough context.`
+```
+
+When you do this, Cowork generates an interactive form. Actual buttons. Clickable options. Multi-select choices. Rankings you can drag and reorder.
 
 AI is finally prompt *you*.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!JYLM!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42262cd1-8892-4abc-b771-4f0874fee590_3456x2170.png)
+![Here, my prompt is literally 2 lines + my Claude Cowork folder. That’s it.](https://substack-post-media.s3.amazonaws.com/public/images/42262cd1-8892-4abc-b771-4f0874fee590_3456x2170.png)
+*Here, my prompt is literally 2 lines + my Claude Cowork folder. That’s it.*
 
-](https://substackcdn.com/image/fetch/$s_!JYLM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42262cd1-8892-4abc-b771-4f0874fee590_3456x2170.png)*Here, my prompt is literally 2 lines + my Claude Cowork folder. That’s it.*
+![I often times write the answer myself. But the options give me a direction.](https://substack-post-media.s3.amazonaws.com/public/images/29a3e917-a682-4932-bfe8-67a93cbd2848_3456x2176.png)
+*I often times write the answer myself. But the options give me a direction.*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!MLpn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29a3e917-a682-4932-bfe8-67a93cbd2848_3456x2176.png)
-
-](https://substackcdn.com/image/fetch/$s_!MLpn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29a3e917-a682-4932-bfe8-67a93cbd2848_3456x2176.png)*I often times write the answer myself. But the options give me a direction.*
-
-[
-![](https://substackcdn.com/image/fetch/$s_!Vdru!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3f0a27a2-f16a-4e96-8745-94b5712f9c2a_3456x2170.png)
-
-](https://substackcdn.com/image/fetch/$s_!Vdru!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3f0a27a2-f16a-4e96-8745-94b5712f9c2a_3456x2170.png)*“Nobody followed you because of your breakfast” is taken from my “about me” file. I can now build up from here.*
+![“Nobody followed you because of your breakfast” is taken from my “about me” file. I can now build up from here.](https://substack-post-media.s3.amazonaws.com/public/images/3f0a27a2-f16a-4e96-8745-94b5712f9c2a_3456x2170.png)
+*“Nobody followed you because of your breakfast” is taken from my “about me” file. I can now build up from here.*
 
 This is called **AskUserQuestion**. It’s a tool built into Cowork. Claude *forces* you to be clear. It asks the right questions so it can give you the right output.
 
-#### **The one prompt I use for everything.**
+#### The one prompt I use for everything.
 
 80% of my chats with Cowork starts like this:
 
-I want to [TASK] to [SUCCESS CRITERIA].
+```
+`I want to [TASK] to [SUCCESS CRITERIA].
 
-First, explore my CLAUDE COWORK folder. Then, ask me questions using the AskUserQuestion tool. I want to refine the approach with you before you execute.**What happens:** Claude reads your context files, generates a clickable form asking about your audience, your goals, your preferences. You click through in under a minute. Claude shows a plan. You approve. It executes — creating real files in your folder. If something’s off midway, you interrupt. Claude recalibrates with a new form. Picks up where it left off.
+First, explore my CLAUDE COWORK folder. Then, ask me questions using the AskUserQuestion tool. I want to refine the approach with you before you execute.`
+```
 
-The entire process feels like directing someone smart instead of wrestling with a text box. I’m obsessed with this feature. 
+**What happens:** Claude reads your context files, generates a clickable form asking about your audience, your goals, your preferences. You click through in under a minute. Claude shows a plan. You approve. It executes — creating real files in your folder. If something’s off midway, you interrupt. Claude recalibrates with a new form. Picks up where it left off.
+
+The entire process feels like directing someone smart instead of wrestling with a text box. I’m obsessed with this feature.
 
 *(Yes, I stopped writing prompts. My prompt folder is collecting dust.)*
 
 I even added a “Text Replacement” on my Mac so that whenever I am typing the command “**/prompt**” it pastes this one prompt:
+[Video]
+> If you use a Mac, search for “Text replacement”. Click on the “+” and simply add a command (I like /prompt) and paste my prompt template.
 
-> If you use a Mac, search for “Text replacement”. Click on the “+” and simply add a command (I like **/prompt**) and paste my prompt template.
+[Subscribe now](https://ruben.substack.com/subscribe?)
 
 ---
 
-## **How to use Plugins inside Cowork.**
+## How to use Plugins inside Cowork.
 
 Remember that $830 billion stock crash I opened with?
 
@@ -277,7 +265,7 @@ Legal software lost so much value because Claude can *do the work*. And the plug
 
 You don’t need to be technical to install it. I promise.
 
-#### **How to install:**
+#### How to install:
 
 1. Open Cowork.
 
@@ -287,37 +275,25 @@ You don’t need to be technical to install it. I promise.
 
 4. Type **/** in the chat to see available slash commands.
 
-[
-![](https://substackcdn.com/image/fetch/$s_!79hs!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F758c956c-ab1a-4a1d-995f-1106c98fa1c4_3456x2174.png)
+![On the homepage, click on “Customize”.](https://substack-post-media.s3.amazonaws.com/public/images/758c956c-ab1a-4a1d-995f-1106c98fa1c4_3456x2174.png)
+*On the homepage, click on “Customize”.*
 
-](https://substackcdn.com/image/fetch/$s_!79hs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F758c956c-ab1a-4a1d-995f-1106c98fa1c4_3456x2174.png)*On the homepage, click on “Customize”.*
+![Can’t make it clearer for you, my friend :)](https://substack-post-media.s3.amazonaws.com/public/images/193efa04-b551-4892-b349-d53e397dc2de_3456x2170.png)
+*Can’t make it clearer for you, my friend :)*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!YEcn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F193efa04-b551-4892-b349-d53e397dc2de_3456x2170.png)
+![Browse, and click “Install” on the ones you want to try. It’s free.](https://substack-post-media.s3.amazonaws.com/public/images/a2a61a01-f635-4abf-b029-4cdbd1285817_3456x2174.png)
+*Browse, and click “Install” on the ones you want to try. It’s free.*
 
-](https://substackcdn.com/image/fetch/$s_!YEcn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F193efa04-b551-4892-b349-d53e397dc2de_3456x2170.png)*Can’t make it clearer for you, my friend :)*
+![Now click on the “+”, go to Plugins > [Name of the plugin] > Subtask.](https://substack-post-media.s3.amazonaws.com/public/images/e4246bcc-7da8-4ad2-bccf-c040c5c0008d_3456x1149.png)
+*Now click on the “+”, go to Plugins > [Name of the plugin] > Subtask.*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!WaLU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2a61a01-f635-4abf-b029-4cdbd1285817_3456x2174.png)
+![Or you just learn the /command (here /onboarding).](https://substack-post-media.s3.amazonaws.com/public/images/eb027a83-3004-4458-bd79-6416129a777d_1750x678.png)
+*Or you just learn the /command (here /onboarding).*
 
-](https://substackcdn.com/image/fetch/$s_!WaLU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2a61a01-f635-4abf-b029-4cdbd1285817_3456x2174.png)*Browse, and click “Install” on the ones you want to try. It’s free.*
+![You can even customize each plugins based on your company (Claude will ask you questions, and it will remember the answers).](https://substack-post-media.s3.amazonaws.com/public/images/14d41ed2-d208-4420-a41b-353aaca6ec21_3456x1001.png)
+*You can even customize each plugins based on your company (Claude will ask you questions, and it will remember the answers).*
 
-[
-![](https://substackcdn.com/image/fetch/$s_!90XN!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4246bcc-7da8-4ad2-bccf-c040c5c0008d_3456x1149.png)
-
-](https://substackcdn.com/image/fetch/$s_!90XN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4246bcc-7da8-4ad2-bccf-c040c5c0008d_3456x1149.png)*Now click on the “+”, go to Plugins > [Name of the plugin] > Subtask.*
-
-[
-![](https://substackcdn.com/image/fetch/$s_!VBzc!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb027a83-3004-4458-bd79-6416129a777d_1750x678.png)
-
-](https://substackcdn.com/image/fetch/$s_!VBzc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb027a83-3004-4458-bd79-6416129a777d_1750x678.png)*Or you just learn the /command (here /onboarding).*
-
-[
-![](https://substackcdn.com/image/fetch/$s_!BSvw!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14d41ed2-d208-4420-a41b-353aaca6ec21_3456x1001.png)
-
-](https://substackcdn.com/image/fetch/$s_!BSvw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14d41ed2-d208-4420-a41b-353aaca6ec21_3456x1001.png)*You can even customize each plugins based on your company (Claude will ask you questions, and it will remember the answers). *
-
-#### **What this looks like in practice:**
+#### What this looks like in practice:
 
 **Marketing plugin**
 
@@ -337,77 +313,99 @@ The prompt: “Review the NDA in this folder. Flag anything unusual or one-sided
 
 **What happens:** Claude reads the contract, highlights risky clauses, explains each one in plain English, and suggests alternative language. This is what wiped $285 billion off the stock market.
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **Connectors: Claude, inside your tools.**
+## Connectors: Claude, inside your tools.
 
 Cowork can also connect to your existing tools. Slack, Google Drive, Notion, Figma, and 50+ others. They’re called Connectors.
 
 Go to **Settings → Connectors**. Browse the directory. Click “Add.” Done.
 
-Once connected, it reads your tools. Claude can search your Slack messages, pull from your Google Docs, or reference your Notion pages mid-conversation. 
-
-Here’s an example with Gamma. 
+Once connected, it reads your tools. Claude can search your Slack messages, pull from your Google Docs, or reference your Notion pages mid-conversation.
+[Video]
+Here’s an example with Gamma.
 
 Oh, and I forgot - connectors are free.
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **How I actually use Cowork every day.**
+## How I actually use Cowork every day.
 
 I don’t use anything else these days.
 
-#### **Use case 1: Writing this newsletter.**
+#### Use case 1: Writing this newsletter.
 
 **The setup:** My folder has my about-me.md, my anti-AI-writing-guide.md, past newsletters that performed well, reference guides from other creators, and official documentation from companies (like OpenAI/Anthropic/Google).
 
-**The prompt:** 
+**The prompt:**
 
-I want to write my next newsletter on using Gemini to grow on Linkedin with infographics using the new Nano Banana 2.
+```
+`I want to write my next newsletter on using Gemini to grow on Linkedin with infographics using the new Nano Banana 2.
 
-First, explore my CLAUDE COWORK folder. Then, ask me questions using the AskUserQuestion tool. I want to refine the approach with you before you execute.**What happens:** Claude reads every file. Generates a form asking about my audience, my tone, what length, what angles the other guides missed. I click answers. It produces an outline. I push back on weak sections. It adjusts. Then it writes — and because it has my voice profile and anti-AI writing guide, the output actually sounds like me.*
+First, explore my CLAUDE COWORK folder. Then, ask me questions using the AskUserQuestion tool. I want to refine the approach with you before you execute.`
+```
+
+**What happens:** Claude reads every file. Generates a form asking about my audience, my tone, what length, what angles the other guides missed. I click answers. It produces an outline. I push back on weak sections. It adjusts. Then it writes — and because it has my voice profile and anti-AI writing guide, the output actually sounds like me.*
 
 I edit. But the heavy lifting is done. This newsletter you’re reading right now was outlined by Cowork and written by me. But you don’t care and you keep reading :)
 
 **look, he used an em-dash, it must be AI!!! no i did it on purpose.*
 
-#### **Use case 2: Consulting deliverables.**
+#### Use case 2: Consulting deliverables.
 
 **The setup:** Client sends a brief. I drop it in the folder next to my templates and past deliverables.
 
-**The prompt:** 
+**The prompt:**
 
-A client just sent a brief for a 2026 AI adoption strategy. The brief is in /projects/client-x/.
+```
+`A client just sent a brief for a 2026 AI adoption strategy. The brief is in /projects/client-x/.
 
 Read the brief, my deliverable template, and my past examples. 
-Create a first draft as a .docx. Ask me questions first (AskUserQuestion).**What happens:** Claude reads the brief. Compares it to my template format. Then it asks me things I didn't think of — *"Should this include a timeline or just recommendations?"* and *"Do you want competitor examples or keep it internal?"* I click answers. It creates a .docx file directly in my folder. 
+Create a first draft as a .docx. Ask me questions first (AskUserQuestion).`
+```
 
-#### **Use case 3: Research and competitive analysis.**
+**What happens:** Claude reads the brief. Compares it to my template format. Then it asks me things I didn't think of — *"Should this include a timeline or just recommendations?"* and *"Do you want competitor examples or keep it internal?"* I click answers. It creates a .docx file directly in my folder.
+
+#### Use case 3: Research and competitive analysis.
 
 **The setup:** I drop 3-5 competitor articles or reports into a subfolder.
 
-**The prompt:** 
+**The prompt:**
 
-I uploaded 4 newsletters from other creators covering Claude Cowork. Read all of them.
-Create a comparison table: what each one covered, what they missed, and where I can be the only one saying something new. Ask me questions first.**What happens:** That used to be a junior job in my company. Now it’s a prompt.
+```
+`I uploaded 4 newsletters from other creators covering Claude Cowork. Read all of them.
+Create a comparison table: what each one covered, what they missed, and where I can be the only one saying something new. Ask me questions first.`
+```
 
-#### **Use case 4: Automated weekly briefing.**
+**What happens:** That used to be a junior job in my company. Now it’s a prompt.
+
+#### Use case 4: Automated weekly briefing.
 
 This one is different. Cowork works *without you even being there*.
 
 **The setup:** You create a folder called **/weekly-briefings/**.
 
-**The prompt** (with **/schedule**, it’s a plugin): 
+**The prompt** (with **/schedule**, it’s a plugin):
 
-Every Monday at 7am, research [competitor names] for news, product updates, or pricing changes. Save a summary to /weekly-briefings/ as a markdown file. Only include items from the past 7 days.**What happens:** Cowork runs automatically every Monday, as long as your computer is awake and the app is open. You wake up to a briefing doc ready to read. That’s the endgame.
+```
+`Every Monday at 7am, research [competitor names] for news, product updates, or pricing changes. Save a summary to /weekly-briefings/ as a markdown file. Only include items from the past 7 days.`
+```
+
+**What happens:** Cowork runs automatically every Monday, as long as your computer is awake and the app is open. You wake up to a briefing doc ready to read. That’s the endgame.
 
 Across all four use cases, the pattern is the same. I never write a long prompt. I write a short task, point to my folder, and say “ask me questions.”
 
 The workflow is always the same. Only the context changes.
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **Where Cowork falls short (I promised honesty).**
+## Where Cowork falls short (I promised honesty).
 
 **It eats your usage fast.** A single Cowork session can burn through what would normally be dozens of regular chat conversations. On the Pro plan ($20/month), you’ll feel it within a week if you use it daily. If Cowork becomes your main workflow, consider Max ($100/month). I’m being direct about this because I don’t want you surprised.
 
@@ -423,13 +421,15 @@ Cowork is not the best at everything. But it’s getting better every week.
 
 And if this is Claude Opus 4.6 + Cowork, I can’t imagine Claude 5, Claude 6…
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **Your first 30 minutes with Cowork.**
+## Your first 30 minutes with Cowork.
 
 Open your calendar. Book 30 minutes with yourself, this newsletter, and Claude.
 
-#### **Minutes 0–5: Install and open Cowork.**
+#### Minutes 0–5: Install and open Cowork.
 
 → Go to **claude.com/download**. Download the desktop app.
 
@@ -439,7 +439,7 @@ Open your calendar. Book 30 minutes with yourself, this newsletter, and Claude.
 
 → You’re in.
 
-#### **Minutes 5–10: Build your context folder.**
+#### Minutes 5–10: Build your context folder.
 
 → Create a folder on your computer called “Claude-Cowork.” Inside it, create four subfolders: **ABOUT ME, TEMPLATES, PROJECTS, CLAUDE OUTPUTS.**
 
@@ -449,7 +449,7 @@ Open your calendar. Book 30 minutes with yourself, this newsletter, and Claude.
 
 Pro tip: Instead of typing, use **[Wispr Flow](https://ruben.substack.com/p/flow)** to talk. It’s 4x faster.
 
-#### **Minutes 10–15: Start your first Cowork conversation.**
+#### Minutes 10–15: Start your first Cowork conversation.
 
 → In Cowork, click **Add Folder** and select your Claude-Cowork folder.
 
@@ -459,7 +459,7 @@ Pro tip: Instead of typing, use **[Wispr Flow](https://ruben.substack.com/p/flow
 
 → Watch what happens. A form appears. Click answers. Let it create your context files.
 
-#### **Minutes 15–20: Install a plugin.**
+#### Minutes 15–20: Install a plugin.
 
 → Click **Customize** in the sidebar → Browse plugins.
 
@@ -469,7 +469,7 @@ Pro tip: Instead of typing, use **[Wispr Flow](https://ruben.substack.com/p/flow
 
 → Type **/** to see what slash commands are available. Try one.
 
-#### **Minutes 20-30: Create a tough deliverable.**
+#### Minutes 20-30: Create a tough deliverable.
 
 → Give Cowork a task you’d actually need for work this week.
 
@@ -479,15 +479,17 @@ Pro tip: Instead of typing, use **[Wispr Flow](https://ruben.substack.com/p/flow
 
 → Optional: be amazed.
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
-## **I don’t care about Claude.**
+## I don’t care about Claude.
 
 I don’t care about Claude, ChatGPT, Grok, Gemini, or any other model.
 
 I don’t pick sides. **I’m not paid to make this newsletter.**
 
-I’m sharing, twice a week, how my work is transforming *(very fast)* with AI. 
+I’m sharing, twice a week, how my work is transforming *(very fast)* with AI.
 
 As I’m trying to keep up, I want *you* to keep up. So we move just as fast.
 
@@ -500,6 +502,8 @@ If this article helped you, **be that person for someone else** (and share it):
 It does not cost you anything to share. And sharing is caring :)
 
 If someone did send you this, thank them and subscribe for free here:
+
+[Subscribe now](https://ruben.substack.com/subscribe?)
 
 ---
 

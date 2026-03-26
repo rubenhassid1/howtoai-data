@@ -2,7 +2,8 @@
 title: "Sins."
 date: 2025-08-24
 slug: the-7-deadly-sins-of-prompting
-subtitle: "And how to fix a bad prompt."
+subtitle: "The 7 Deadly Sins of Prompting."
+audience: free
 url: https://ruben.substack.com/p/the-7-deadly-sins-of-prompting
 ---
 
@@ -10,13 +11,15 @@ Most (ChatGPT) prompts fail because they’re wishes, not briefs.
 
 Good outputs start with good inputs. Prompting isn’t magic; it’s a good brief.
 
-✦ The 7 deadly sins of prompting (to avoid at all costs). 
+✦ The 7 deadly sins of prompting (to avoid at all costs).
 
 ✦ Iteration beats length: prompt quicker, not longer.
 
 ✦ The R-E-X prompt works 99% of the time.
 
-Let’s retrain how you prompt in this 10-minute guide. 
+Let’s retrain how you prompt in this 10-minute guide.
+
+[Subscribe now](https://ruben.substack.com/subscribe?)
 
 ---
 
@@ -104,11 +107,14 @@ I explained how [here](https://ruben.substack.com/p/linkedin).
 
 **After**: “Model the tone and density on these two snippets [paste]. Avoid this anti-example [paste]. Keep sentence length under 16 words.”
 
+[Subscribe now](https://ruben.substack.com/subscribe?)
+
 ---
 
 ## The R-E-X Prompt
 
 > The R-E-X prompt is to define a role, give examples & set expectations in your (ChatGPT, or other AI) prompt.
+
 **Role**
 Define who the model is and the constraints of the job. Domain. Audience. Risk tolerance.
 **Examples**
@@ -118,23 +124,21 @@ State format, length, tone, any banned words, a scoring rubric, and the iteratio
 
 **R-E-X 3-step checklist**
 
-1. Write the Role line.
-2. Paste the Examples.
-3. Set Expectations: format, word range, tone, rubric, and loop.
+1. Write the Role line.2. Paste the Examples.3. Set Expectations: format, word range, tone, rubric, and loop.
 
 > Role: Senior marketing analyst for non-technical leadership. Plain English. No hype.Example to imitate: “CTR 1.8% vs 1.2% (+0.6pp). CPC $2.45 vs $3.10 (−21%). So what: shift budget to exact-match.”Inputs I’ll paste: timeframe; channels; our metrics; benchmarks (or “none”). If anything’s missing, ask one precise question and stop.Task: Compare us vs benchmarks; flag any KPI with ≥15% gap (better or worse).Return in order: Summary (≤5 lines + one “so what”); Comparisons by channel inline; Findings (5–7 lines with likely cause + confidence H/M/L); Actions (top 3 with impact %, test days, difficulty L/M/H); Notes (methods + data risks).
+
+[Subscribe now](https://ruben.substack.com/subscribe?)
 
 ---
 
 ## My Prompt Maker
 
-I made a GPT to help you write better prompts. 
+I made a GPT to help you write better prompts.
 
 It’s free, and I don’t get anything from it.
 
-1. Go to [Prompt Maker](https://chatgpt.com/g/g-hhh4w3eov-prompt-maker).
-2. Write your (bad) prompt.
-3. You will receive a (better) prompt.
+1. Go to Prompt Maker.2. Write your (bad) prompt.3. You will receive a (better) prompt.
 
 Self-critic: sometimes, the Prompt Maker makes it *too* long.
 
@@ -142,9 +146,7 @@ What I love to do is to use it and trim it before copying/pasting the prompt.
 
 If this whole process feels too long, prefer this:
 
-1. Write a quick, clear prompt.
-2. Ask ChatGPT to ask you clarification questions.
-3. You’re “forced” to make it clearer = writing a better prompt.
+1. Write a quick, clear prompt.2. Ask ChatGPT to ask you clarification questions.3. You’re “forced” to make it clearer = writing a better prompt.
 
 Like anything, the more you prompt, the better you are at it.
 
@@ -154,12 +156,4 @@ That’s it for this Sunday’s edition.
 
 ✦ For the full archive of my blogs: https://docs.google.com/document/d/1pWuMCBVQo1zKcgKltX_BZxAr31KgxmOlp3Vzvmc5Hxc/edit?usp=sharing
 
-✦ To join my member-only chat: 
-
-[
-![User's avatar](https://substackcdn.com/image/fetch/$s_!ARr-!,w_64,h_64,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74715318-6b66-4099-8165-1c729f38eb94_1080x1080.png)
-
-Join Ruben Hassid’s subscriber chat
-Available in the Substack app and on web
-
-](https://open.substack.com/pub/ruben/chat?utm_source=chat_embed)
+✦ To join my member-only chat:
