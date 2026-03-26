@@ -88,9 +88,9 @@ export default function Home() {
             </div>
             <ul className="text-[#ccc] text-[13px] leading-relaxed space-y-1">
               <li><strong className="text-white">Everything free gets</strong></li>
-              <li>+ Private Slack community <span className="text-[#555]">(1,039 members)</span></li>
+              <li>+ Private Slack community</li>
               <li>+ $219 in AI tools bundle</li>
-              <li>+ Direct LinkedIn connection <span className="text-[#555]">(760K followers)</span></li>
+              <li>+ Direct LinkedIn connection</li>
             </ul>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function Home() {
             project by Ruben Hassid
           </p>
           <p className="text-[#555] text-[11px]">
-            395K+ subscribers
+            400K+ subscribers
           </p>
         </div>
       </main>
