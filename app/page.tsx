@@ -30,33 +30,26 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#171717] flex flex-col items-center">
-      <main className="w-full max-w-xl px-5 pt-14 pb-10">
+    <div className="h-screen overflow-hidden bg-[#171717] flex flex-col items-center justify-center">
+      <main className="w-full max-w-xl px-5">
         {/* Header */}
-        <div className="flex flex-col items-center mb-10">
-          <div className="w-12 h-12 rounded-xl bg-[#FF6719] flex items-center justify-center mb-4">
-            <span className="text-white text-lg font-bold leading-none" style={{ fontFamily: "Arial, sans-serif" }}>
-              AI
-            </span>
-          </div>
-          <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight">
-            How to AI Data
-          </h1>
-        </div>
+        <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-6">
+          How to AI Data
+        </h1>
 
         {/* Divider */}
-        <div className="h-px bg-[#252525] mb-8" />
+        <div className="h-px bg-[#252525] mb-5" />
 
         {/* Download section */}
         <h2 className="text-[15px] font-semibold text-white mb-1.5">
           Download the data
         </h2>
-        <p className="text-[#a2a2a2] text-[13px] leading-snug mb-6">
+        <p className="text-[#a2a2a2] text-[13px] leading-snug mb-4">
           Get every How to AI newsletter post as clean Markdown files, ready for Claude, ChatGPT, or any AI tool.
         </p>
 
         {/* Tier cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
           {/* Free tier */}
           <div className="rounded-lg border border-[#252525] bg-[#1e1e1e] px-4 py-3.5">
             <div className="flex items-center gap-2 mb-2">
@@ -88,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* GitHub link */}
-        <p className="text-[#a2a2a2] text-[12px] mb-8">
+        <p className="text-[#a2a2a2] text-[12px] mb-5">
           Want to browse the data first?{" "}
           <a
             href="https://github.com/rubenhassid1/howtoai-starter-data"
@@ -101,10 +94,10 @@ export default function Home() {
         </p>
 
         {/* Divider */}
-        <div className="h-px bg-[#252525] mb-6" />
+        <div className="h-px bg-[#252525] mb-5" />
 
         {/* Email form or Download */}
-        <div className="mb-8">
+        <div className="mb-5">
           {showDownload ? (
             <div className="space-y-3">
               <a
@@ -193,7 +186,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="pt-6 border-t border-[#252525] flex items-center justify-between">
+        <div className="pt-4 border-t border-[#252525] flex items-center justify-between">
           <p className="text-[#555] text-[11px]">
             A{" "}
             <a
