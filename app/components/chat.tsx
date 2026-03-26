@@ -1,10 +1,67 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 interface Message {
   role: "user" | "assistant";
   content: string;
+}
+
+// Render markdown links and bold as HTML
+function renderContent(text: string) {
+  if (!text) return null;
+
+  // Split by markdown links [text](url) and bold **text**
+  const parts: Array<{ type: "text" | "link" | "bold"; value: string; href?: string }> = [];
+  let remaining = text;
+
+  while (remaining.length > 0) {
+    // Find next markdown link or bold
+    const linkMatch = remaining.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/);
+    const boldMatch = remaining.match(/\*\*([^*]+)\*\*/);
+
+    const linkIdx = linkMatch ? remaining.indexOf(linkMatch[0]) : Infinity;
+    const boldIdx = boldMatch ? remaining.indexOf(boldMatch[0]) : Infinity;
+
+    if (linkIdx === Infinity && boldIdx === Infinity) {
+      parts.push({ type: "text", value: remaining });
+      break;
+    }
+
+    if (linkIdx <= boldIdx && linkMatch) {
+      if (linkIdx > 0) parts.push({ type: "text", value: remaining.slice(0, linkIdx) });
+      parts.push({ type: "link", value: linkMatch[1], href: linkMatch[2] });
+      remaining = remaining.slice(linkIdx + linkMatch[0].length);
+    } else if (boldMatch) {
+      if (boldIdx > 0) parts.push({ type: "text", value: remaining.slice(0, boldIdx) });
+      parts.push({ type: "bold", value: boldMatch[1] });
+      remaining = remaining.slice(boldIdx + boldMatch[0].length);
+    }
+  }
+
+  return (
+    <>
+      {parts.map((p, i) => {
+        if (p.type === "link") {
+          return (
+            <a
+              key={i}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF6719] underline underline-offset-2 hover:text-[#e55a14]"
+            >
+              {p.value}
+            </a>
+          );
+        }
+        if (p.type === "bold") {
+          return <strong key={i} className="font-semibold text-white">{p.value}</strong>;
+        }
+        return <span key={i}>{p.value}</span>;
+      })}
+    </>
+  );
 }
 
 export default function Chat() {
@@ -23,17 +80,11 @@ export default function Chat() {
     if (open) inputRef.current?.focus();
   }, [open]);
 
-  async function send() {
-    const text = input.trim();
-    if (!text || streaming) return;
-
-    const userMsg: Message = { role: "user", content: text };
-    setMessages((prev) => [...prev, userMsg]);
-    setInput("");
+  const streamResponse = useCallback(async (text: string, prevMessages: Message[]) => {
+    const userMsg: Message = { role: "user" as const, content: text };
+    const newMessages: Message[] = [...prevMessages, userMsg, { role: "assistant" as const, content: "" }];
+    setMessages(newMessages);
     setStreaming(true);
-
-    // Add empty assistant message for streaming
-    setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
     try {
       const res = await fetch("/api/chat", {
@@ -41,7 +92,7 @@ export default function Chat() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: text,
-          history: messages.slice(-6),
+          history: prevMessages.slice(-4),
         }),
       });
 
@@ -49,10 +100,7 @@ export default function Chat() {
         const err = await res.json();
         setMessages((prev) => {
           const updated = [...prev];
-          updated[updated.length - 1] = {
-            role: "assistant",
-            content: err.error || "Something went wrong.",
-          };
+          updated[updated.length - 1] = { role: "assistant", content: err.error || "Something went wrong." };
           return updated;
         });
         setStreaming(false);
@@ -72,45 +120,41 @@ export default function Chat() {
         buffer = lines.pop() || "";
 
         for (const line of lines) {
-          if (line.startsWith("data: ")) {
-            const data = line.slice(6);
-            if (data === "[DONE]") continue;
+          if (line.startsWith("data: ") && line.slice(6) !== "[DONE]") {
             try {
-              const parsed = JSON.parse(data);
+              const parsed = JSON.parse(line.slice(6));
               if (parsed.text) {
                 setMessages((prev) => {
                   const updated = [...prev];
                   const last = updated[updated.length - 1];
-                  updated[updated.length - 1] = {
-                    ...last,
-                    content: last.content + parsed.text,
-                  };
+                  updated[updated.length - 1] = { ...last, content: last.content + parsed.text };
                   return updated;
                 });
               }
-            } catch {
-              // skip
-            }
+            } catch { /* skip */ }
           }
         }
       }
     } catch {
       setMessages((prev) => {
         const updated = [...prev];
-        updated[updated.length - 1] = {
-          role: "assistant",
-          content: "Network error. Please try again.",
-        };
+        updated[updated.length - 1] = { role: "assistant", content: "Network error. Try again." };
         return updated;
       });
     }
 
     setStreaming(false);
+  }, []);
+
+  function send() {
+    const text = input.trim();
+    if (!text || streaming) return;
+    setInput("");
+    streamResponse(text, messages);
   }
 
   return (
     <>
-      {/* Floating button */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -123,14 +167,13 @@ export default function Chat() {
         </button>
       )}
 
-      {/* Chat panel */}
       {open && (
         <div className="fixed bottom-5 right-5 w-[360px] h-[500px] max-h-[80vh] bg-[#171717] border border-[#252525] rounded-xl shadow-2xl shadow-black/50 flex flex-col z-50 overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-[#252525]">
             <div>
               <p className="text-white text-[13px] font-semibold">Ask How to AI</p>
-              <p className="text-[#777] text-[10px]">Powered by Claude Sonnet 4.6</p>
+              <p className="text-[#777] text-[10px]">Answers from 72 newsletters</p>
             </div>
             <button
               onClick={() => setOpen(false)}
@@ -151,65 +194,15 @@ export default function Chat() {
                 <p className="text-[#555] text-[12px] mb-3">Ask anything about the newsletters</p>
                 <div className="space-y-1.5">
                   {[
-                    "What are the best prompting tips?",
-                    "How to set up Claude?",
-                    "What AI tools does Ruben use?",
+                    "What's the best AI for search?",
+                    "How do I set up Claude?",
+                    "What are the deadly sins of prompting?",
                   ].map((q) => (
                     <button
                       key={q}
-                      onClick={() => {
-                        setInput(q);
-                        setTimeout(() => {
-                          setInput(q);
-                          // Trigger send
-                          const userMsg: Message = { role: "user", content: q };
-                          setMessages([userMsg, { role: "assistant", content: "" }]);
-                          setStreaming(true);
-                          fetch("/api/chat", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ message: q, history: [] }),
-                          }).then(async (res) => {
-                            if (!res.ok) {
-                              const err = await res.json();
-                              setMessages([userMsg, { role: "assistant", content: err.error || "Something went wrong." }]);
-                              setStreaming(false);
-                              return;
-                            }
-                            const reader = res.body!.getReader();
-                            const decoder = new TextDecoder();
-                            let buf = "";
-                            while (true) {
-                              const { done, value } = await reader.read();
-                              if (done) break;
-                              buf += decoder.decode(value, { stream: true });
-                              const lines = buf.split("\n");
-                              buf = lines.pop() || "";
-                              for (const line of lines) {
-                                if (line.startsWith("data: ") && line.slice(6) !== "[DONE]") {
-                                  try {
-                                    const parsed = JSON.parse(line.slice(6));
-                                    if (parsed.text) {
-                                      setMessages((prev) => {
-                                        const updated = [...prev];
-                                        const last = updated[updated.length - 1];
-                                        updated[updated.length - 1] = { ...last, content: last.content + parsed.text };
-                                        return updated;
-                                      });
-                                    }
-                                  } catch { /* skip */ }
-                                }
-                              }
-                            }
-                            setStreaming(false);
-                          }).catch(() => {
-                            setMessages([userMsg, { role: "assistant", content: "Network error." }]);
-                            setStreaming(false);
-                          });
-                          setInput("");
-                        }, 0);
-                      }}
-                      className="block w-full text-left text-[11px] text-[#999] hover:text-[#FF6719] border border-[#252525] hover:border-[#FF6719]/20 rounded-lg px-3 py-2 transition-colors cursor-pointer"
+                      onClick={() => streamResponse(q, [])}
+                      disabled={streaming}
+                      className="block w-full text-left text-[11px] text-[#999] hover:text-[#FF6719] border border-[#252525] hover:border-[#FF6719]/20 rounded-lg px-3 py-2 transition-colors cursor-pointer disabled:opacity-50"
                     >
                       {q}
                     </button>
@@ -230,7 +223,9 @@ export default function Chat() {
                       : "bg-[#1e1e1e] border border-[#252525] text-[#ccc]"
                   }`}
                 >
-                  {msg.content || (
+                  {msg.content ? (
+                    msg.role === "assistant" ? renderContent(msg.content) : msg.content
+                  ) : (
                     <div className="flex items-center gap-1.5">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#FF6719] animate-pulse" />
                       <div className="w-1.5 h-1.5 rounded-full bg-[#FF6719] animate-pulse [animation-delay:0.2s]" />
@@ -259,6 +254,7 @@ export default function Chat() {
                 }}
                 placeholder="Ask about the newsletters..."
                 disabled={streaming}
+                maxLength={500}
                 className="flex-1 rounded-lg border border-[#252525] bg-[#1e1e1e] px-3 py-2 text-white text-[12px] placeholder:text-[#555] focus:outline-none focus:border-[#FF6719] focus:ring-1 focus:ring-[#FF6719]/50 transition-colors disabled:opacity-50"
               />
               <button
