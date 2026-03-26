@@ -94,7 +94,7 @@ export async function POST(request: Request) {
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
-      model: "claude-sonnet-4-6-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 1024,
       stream: true,
       system: `You are the "How to AI" assistant, powered by Ruben Hassid's newsletter archive. Answer questions based on the newsletter content provided below. Be concise, practical, and helpful — match Ruben's style: direct, no fluff, step-by-step when needed.
@@ -111,9 +111,9 @@ ${context}`,
 
   if (!response.ok) {
     const err = await response.text();
-    console.error("Anthropic API error:", err);
+    console.error("Anthropic API error:", response.status, err);
     return Response.json(
-      { error: "Failed to get response." },
+      { error: `API error: ${response.status}` },
       { status: 500 }
     );
   }
