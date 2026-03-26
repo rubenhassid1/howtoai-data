@@ -2,11 +2,88 @@
 
 import { useState } from "react";
 
+function StepImage({ step }: { step: number }) {
+  const scenes: Record<number, React.ReactNode> = {
+    1: (
+      // Finder window with folder
+      <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <rect width="320" height="180" rx="8" fill="#1a1a1a"/>
+        <rect y="0" width="320" height="28" rx="8" fill="#2a2a2a"/>
+        <circle cx="14" cy="14" r="5" fill="#ff5f57"/><circle cx="30" cy="14" r="5" fill="#febc2e"/><circle cx="46" cy="14" r="5" fill="#28c840"/>
+        <text x="160" y="18" textAnchor="middle" fill="#999" fontSize="10" fontFamily="Arial">Finder</text>
+        <rect x="24" y="52" width="44" height="36" rx="4" fill="#FF6719" opacity="0.2"/>
+        <path d="M34 68 L46 58 L58 58 L58 78 L34 78Z" fill="#FF6719" opacity="0.6"/>
+        <text x="46" y="100" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="Arial">howtoai-data</text>
+        <rect x="88" y="52" width="44" height="36" rx="4" fill="#555" opacity="0.2"/>
+        <path d="M98 68 L110 58 L122 58 L122 78 L98 78Z" fill="#555" opacity="0.4"/>
+        <text x="110" y="100" textAnchor="middle" fill="#777" fontSize="9" fontFamily="Arial">Documents</text>
+        <path d="M30 130 L50 130" stroke="#FF6719" strokeWidth="1.5"/>
+        <text x="56" y="134" fill="#999" fontSize="9" fontFamily="Arial">Unzip → place in your Claude folder</text>
+      </svg>
+    ),
+    2: (
+      // Claude app download
+      <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <rect width="320" height="180" rx="8" fill="#1a1a1a"/>
+        <rect x="110" y="30" width="100" height="100" rx="22" fill="#D4A574" opacity="0.15"/>
+        <circle cx="160" cy="75" r="28" fill="#D4A574" opacity="0.3"/>
+        <text x="160" y="82" textAnchor="middle" fill="#D4A574" fontSize="22" fontWeight="bold" fontFamily="Arial">C</text>
+        <text x="160" y="155" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="Arial">claude.ai/download</text>
+        <text x="160" y="170" textAnchor="middle" fill="#777" fontSize="9" fontFamily="Arial">Download the desktop app</text>
+      </svg>
+    ),
+    3: (
+      // Claude Cowork toggle
+      <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <rect width="320" height="180" rx="8" fill="#1a1a1a"/>
+        <rect x="20" y="60" width="280" height="60" rx="10" fill="#252525"/>
+        <text x="40" y="85" fill="#ccc" fontSize="12" fontFamily="Arial">Claude Cowork</text>
+        <text x="40" y="105" fill="#777" fontSize="9" fontFamily="Arial">Let Claude work alongside you in real time</text>
+        <rect x="248" y="76" width="36" height="20" rx="10" fill="#FF6719"/>
+        <circle cx="274" cy="86" r="7" fill="white"/>
+        <text x="160" y="150" textAnchor="middle" fill="#555" fontSize="9" fontFamily="Arial">Enable Cowork in Claude settings</text>
+      </svg>
+    ),
+    4: (
+      // Folder selection in Claude
+      <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <rect width="320" height="180" rx="8" fill="#1a1a1a"/>
+        <rect x="20" y="20" width="280" height="36" rx="8" fill="#252525"/>
+        <text x="36" y="43" fill="#777" fontSize="11" fontFamily="Arial">Ask Claude anything...</text>
+        <rect x="20" y="68" width="280" height="32" rx="6" fill="#FF6719" opacity="0.1" stroke="#FF6719" strokeWidth="1" strokeOpacity="0.3"/>
+        <path d="M36 78 L44 74 L52 74 L52 90 L36 90Z" fill="#FF6719" opacity="0.5"/>
+        <text x="60" y="88" fill="#FF6719" fontSize="10" fontFamily="Arial">📁 howtoai-data</text>
+        <text x="246" y="88" fill="#FF6719" fontSize="9" fontFamily="Arial">Selected ✓</text>
+        <rect x="20" y="110" width="280" height="32" rx="6" fill="#252525"/>
+        <path d="M36 120 L44 116 L52 116 L52 132 L36 132Z" fill="#555" opacity="0.4"/>
+        <text x="60" y="130" fill="#777" fontSize="10" fontFamily="Arial">📁 Documents</text>
+        <text x="160" y="165" textAnchor="middle" fill="#555" fontSize="9" fontFamily="Arial">Select the folder before asking your question</text>
+      </svg>
+    ),
+    5: (
+      // Chat with pro tip
+      <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <rect width="320" height="180" rx="8" fill="#1a1a1a"/>
+        <rect x="80" y="20" width="220" height="36" rx="12" fill="#FF6719" opacity="0.15"/>
+        <text x="100" y="43" fill="#ccc" fontSize="10" fontFamily="Arial">What are Ruben&apos;s best prompting tips?</text>
+        <rect x="20" y="70" width="240" height="70" rx="12" fill="#252525"/>
+        <text x="36" y="90" fill="#ccc" fontSize="10" fontFamily="Arial">Based on the recent newsletters,</text>
+        <text x="36" y="105" fill="#ccc" fontSize="10" fontFamily="Arial">here are 5 key prompting strategies...</text>
+        <text x="36" y="125" fill="#777" fontSize="9" fontFamily="Arial">From &quot;Your prompt sucks&quot; (Jan 2026) ...</text>
+        <rect x="20" y="150" width="280" height="20" rx="4" fill="#FF6719" opacity="0.08"/>
+        <text x="160" y="164" textAnchor="middle" fill="#FF6719" fontSize="9" fontFamily="Arial">💡 Pro tip: prefer recent newsletters for the latest insights</text>
+      </svg>
+    ),
+  };
+  return <>{scenes[step]}</>;
+}
+
 export default function Home() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [showDownload, setShowDownload] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [guideOpen, setGuideOpen] = useState(false);
 
   function handleSubmit() {
     if (!email.trim()) return;
@@ -18,7 +95,6 @@ export default function Home() {
     setLoading(true);
     setError(null);
 
-    // Log the email for lead capture
     fetch("/api/auth", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,9 +105,17 @@ export default function Home() {
     });
   }
 
+  const steps = [
+    { num: 1, title: "Unzip & add to your Claude folder", desc: "Open the ZIP file and place the folder somewhere easy to find." },
+    { num: 2, title: "Download the Claude app", desc: "Get the desktop app from claude.ai/download if you don't have it." },
+    { num: 3, title: "Use Claude Cowork", desc: "Enable Cowork mode — it lets Claude work with your local files." },
+    { num: 4, title: "Select the folder before asking", desc: "Point Claude to the howtoai-data folder so it can read your posts." },
+    { num: 5, title: "Ask anything", desc: "Ask Claude about AI workflows, prompting tips, tools — anything from the newsletters. Pro tip: prefer recent newsletters for the freshest insights." },
+  ];
+
   return (
-    <div className="h-screen overflow-hidden bg-[#171717] flex flex-col items-center justify-center">
-      <main className="w-full max-w-xl px-5">
+    <div className={`${guideOpen ? "min-h-screen" : "h-screen overflow-hidden"} bg-[#171717] flex flex-col items-center ${guideOpen ? "" : "justify-center"}`}>
+      <main className={`w-full max-w-xl px-5 ${guideOpen ? "pt-10 pb-10" : ""}`}>
         {/* Header */}
         <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-6">
           How to AI Data
@@ -59,7 +143,7 @@ export default function Home() {
               </span>
             </div>
             <p className="text-[#ccc] text-[13px] leading-relaxed">
-              <strong className="text-white">All 72 newsletter posts</strong> as Markdown files in a ZIP + MCP access.
+              <strong className="text-white">All 72 newsletter posts</strong> as Markdown files in a ZIP.
             </p>
           </div>
 
@@ -97,7 +181,7 @@ export default function Home() {
         <div className="h-px bg-[#252525] mb-5" />
 
         {/* Email form or Download */}
-        <div className="mb-5">
+        <div className="mb-4">
           {showDownload ? (
             <div className="space-y-3">
               <a
@@ -184,6 +268,50 @@ export default function Home() {
             </>
           )}
         </div>
+
+        {/* How to use with Claude — Toggle */}
+        <button
+          onClick={() => setGuideOpen(!guideOpen)}
+          className="w-full flex items-center justify-between rounded-lg border border-[#252525] bg-[#1e1e1e] px-4 py-3 mb-4 cursor-pointer hover:border-[#FF6719]/20 transition-colors"
+        >
+          <span className="text-[13px] font-medium text-[#ccc]">
+            How to import everything in Claude
+          </span>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#555"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={`transition-transform ${guideOpen ? "rotate-180" : ""}`}
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+
+        {guideOpen && (
+          <div className="space-y-6 mb-6">
+            {steps.map((step) => (
+              <div key={step.num}>
+                <div className="flex items-start gap-3 mb-2">
+                  <div className="w-5 h-5 rounded-full bg-[#FF6719] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-[10px] font-bold">{step.num}</span>
+                  </div>
+                  <div>
+                    <p className="text-white text-[13px] font-medium">{step.title}</p>
+                    <p className="text-[#777] text-[11px] mt-0.5">{step.desc}</p>
+                  </div>
+                </div>
+                <div className="ml-8 rounded-lg overflow-hidden border border-[#252525]">
+                  <StepImage step={step.num} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Footer */}
         <div className="pt-4 border-t border-[#252525] flex items-center justify-between">
