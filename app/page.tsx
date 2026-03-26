@@ -5,36 +5,28 @@ import { useState } from "react";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [showDownload, setShowDownload] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleSubmit() {
+  function handleSubmit() {
     if (!email.trim()) return;
-
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      setError("Please enter a valid email address.");
+      return;
+    }
     setLoading(true);
     setError(null);
-    setSuccess(false);
 
-    try {
-      const res = await fetch("/api/auth", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim() }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        setError(data.message || "Something went wrong.");
-        return;
-      }
-
-      setSuccess(true);
-    } catch {
-      setError("Network error. Please try again.");
-    } finally {
+    // Log the email for lead capture
+    fetch("/api/auth", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email.trim() }),
+    }).finally(() => {
       setLoading(false);
-    }
+      setShowDownload(true);
+    });
   }
 
   return (
@@ -60,7 +52,7 @@ export default function Home() {
           Download the data
         </h2>
         <p className="text-[#a2a2a2] text-[13px] leading-snug mb-6">
-          Enter your subscriber email and we&apos;ll send a sign-in link to download the data.
+          Get every How to AI newsletter post as clean Markdown files, ready for Claude, ChatGPT, or any AI tool.
         </p>
 
         {/* Tier cards */}
@@ -111,26 +103,59 @@ export default function Home() {
         {/* Divider */}
         <div className="h-px bg-[#252525] mb-6" />
 
-        {/* Email form */}
+        {/* Email form or Download */}
         <div className="mb-8">
-          <label
-            htmlFor="email"
-            className="block text-[13px] font-medium text-[#ccc] mb-2"
-          >
-            Your How to AI subscriber email
-          </label>
+          {showDownload ? (
+            <div className="space-y-3">
+              <a
+                href="/howtoai-full-archive.zip"
+                download
+                className="flex items-center justify-between w-full rounded-lg border border-[#252525] bg-[#1e1e1e] hover:border-[#FF6719]/30 p-4 transition-colors group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-[#FF6719]/10 flex items-center justify-center">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6719" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-[13px]">
+                      Download Full Archive
+                    </p>
+                    <p className="text-[#555] text-[11px] mt-0.5">
+                      72 posts as Markdown — ZIP file
+                    </p>
+                  </div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-[#FF6719] transition-colors">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </a>
 
-          {success ? (
-            <div className="rounded-lg bg-[#FF6719]/8 border border-[#FF6719]/20 px-4 py-3 text-center">
-              <p className="text-[#FF6719] font-semibold text-[13px]">
-                Check your email!
-              </p>
-              <p className="text-[#a2a2a2] text-[11px] mt-0.5">
-                Download link sent to <span className="text-[#ccc]">{email}</span>
-              </p>
+              <div className="rounded-lg border border-[#252525] bg-[#1e1e1e] px-4 py-3 text-center">
+                <p className="text-[#a2a2a2] text-[12px]">
+                  Want the Slack community, AI tools & LinkedIn connection?{" "}
+                  <a
+                    href="https://ruben.substack.com/subscribe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FF6719] hover:text-[#e55a14] transition-colors font-medium"
+                  >
+                    Upgrade to paid &rarr;
+                  </a>
+                </p>
+              </div>
             </div>
           ) : (
             <>
+              <label
+                htmlFor="email"
+                className="block text-[13px] font-medium text-[#ccc] mb-2"
+              >
+                Your email
+              </label>
               <div className="flex gap-2">
                 <input
                   id="email"
