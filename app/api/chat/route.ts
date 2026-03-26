@@ -85,19 +85,12 @@ export async function POST(request: Request) {
 
   messages.push({ role: "user", content: message });
 
-  // Call Anthropic API with streaming
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1024,
-      stream: true,
-      system: `You are the "How to AI" assistant, powered by Ruben Hassid's newsletter archive. Answer questions based on the newsletter content provided below. Be concise, practical, and helpful — match Ruben's style: direct, no fluff, step-by-step when needed.
+  // Call Anthropic API with streaming (retry on 429)
+  const requestBody = JSON.stringify({
+    model: "claude-sonnet-4-6",
+    max_tokens: 1024,
+    stream: true,
+    system: `You are the "How to AI" assistant, powered by Ruben Hassid's newsletter archive. Answer questions based on the newsletter content provided below. Be concise, practical, and helpful — match Ruben's style: direct, no fluff, step-by-step when needed.
 
 If the answer is clearly in the newsletters, cite which post it came from (title and date). If the user asks something not covered in the newsletters, say so honestly and give your best answer anyway.
 
@@ -105,15 +98,33 @@ Keep responses short and scannable. Use bullet points or numbered steps when lis
 
 NEWSLETTER CONTENT:
 ${context}`,
-      messages,
-    }),
+    messages,
   });
 
-  if (!response.ok) {
-    const err = await response.text();
-    console.error("Anthropic API error:", response.status, err);
+  let response: Response | null = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+      },
+      body: requestBody,
+    });
+
+    if (response.status !== 429) break;
+
+    // Wait before retrying (1s, 2s)
+    const retryAfter = Number(response.headers.get("retry-after")) || (attempt + 1);
+    await new Promise((r) => setTimeout(r, retryAfter * 1000));
+  }
+
+  if (!response || !response.ok) {
+    const err = response ? await response.text() : "No response";
+    console.error("Anthropic API error:", response?.status, err);
     return Response.json(
-      { error: `API error: ${response.status}` },
+      { error: response?.status === 429 ? "Too many requests. Try again in a moment." : "Failed to get response." },
       { status: 500 }
     );
   }
