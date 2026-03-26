@@ -46,30 +46,35 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid message." }, { status: 400 });
   }
 
-  // Full index of ALL posts (lightweight: title + subtitle + date + URL)
+  // Full index of ALL posts (compact: title + date + URL only)
   const fullIndex = postsData
     .map(
       (p) =>
-        `- "${p.title}" (${p.date}) ${p.subtitle ? `— ${p.subtitle}` : ""} → https://ruben.substack.com/p/${p.slug}`
+        `- "${p.title}" (${p.date}) → https://ruben.substack.com/p/${p.slug}`
     )
     .join("\n");
 
   // Find relevant posts for full content
   const relevant = findRelevantPosts(message);
   const topPosts = relevant.length > 0 ? relevant : postsData.slice(0, 5);
+
+  // Trim content more aggressively to stay within context limits
+  const hasHistory = history && Array.isArray(history) && history.length > 0;
+  const contentLimit = hasHistory ? 1500 : 2500;
   const fullContent = topPosts
+    .slice(0, hasHistory ? 3 : 5)
     .map(
       (p) =>
-        `---\nTitle: ${p.title}\nDate: ${p.date}\nURL: https://ruben.substack.com/p/${p.slug}\n---\n${p.content.slice(0, 3000)}`
+        `---\nTitle: ${p.title}\nDate: ${p.date}\nURL: https://ruben.substack.com/p/${p.slug}\n---\n${p.content.slice(0, contentLimit)}`
     )
     .join("\n\n");
 
-  // Build messages array
+  // Build messages array — keep history short to save tokens
   const messages = [];
   if (history && Array.isArray(history)) {
-    const recent = history.slice(-4);
+    const recent = history.slice(-2);
     for (const msg of recent) {
-      messages.push({ role: msg.role, content: msg.content });
+      messages.push({ role: msg.role, content: msg.content.slice(0, 500) });
     }
   }
   messages.push({ role: "user", content: message });
