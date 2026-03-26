@@ -65,10 +65,39 @@ function renderContent(text: string) {
 }
 
 export default function Chat() {
+  const ALL_QUESTIONS = [
+    "What's the best AI for search?",
+    "How do I set up Claude the right way?",
+    "What are the 7 deadly sins of prompting?",
+    "How can I grow on LinkedIn with AI?",
+    "Is ChatGPT getting worse?",
+    "How do I train ChatGPT to write like me?",
+    "What's the ideal prompt length?",
+    "How do I make AI slides?",
+    "Which AI makes the best images?",
+    "How do I use AI inside spreadsheets?",
+    "What's better: ChatGPT or Claude?",
+    "How to vibe code without coding?",
+    "What AI tools does Ruben pay for?",
+    "How to make carousels with AI?",
+    "Is AI detection a scam?",
+    "How to use AI for business plans?",
+    "What's the best way to search with AI?",
+    "How to replace consultants with AI?",
+    "What's Claude Cowork?",
+    "How to prompt ChatGPT with context?",
+  ];
+
+  function pickRandom() {
+    const shuffled = [...ALL_QUESTIONS].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 3);
+  }
+
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [streaming, setStreaming] = useState(false);
+  const [suggestions, setSuggestions] = useState<string[]>(pickRandom);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -190,14 +219,10 @@ export default function Chat() {
           {/* Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
             {messages.length === 0 && (
-              <div className="text-center pt-16">
+              <div className="text-center pt-12">
                 <p className="text-[#555] text-[12px] mb-3">Ask anything about the newsletters</p>
                 <div className="space-y-1.5">
-                  {[
-                    "What's the best AI for search?",
-                    "How do I set up Claude?",
-                    "What are the deadly sins of prompting?",
-                  ].map((q) => (
+                  {suggestions.map((q) => (
                     <button
                       key={q}
                       onClick={() => streamResponse(q, [])}
@@ -208,6 +233,18 @@ export default function Chat() {
                     </button>
                   ))}
                 </div>
+                <button
+                  onClick={() => setSuggestions(pickRandom())}
+                  className="mt-3 text-[10px] text-[#555] hover:text-[#FF6719] transition-colors cursor-pointer flex items-center gap-1 mx-auto"
+                >
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21.5 2v6h-6" />
+                    <path d="M2.5 22v-6h6" />
+                    <path d="M2.5 11.5a10 10 0 0 1 18.8-4.3" />
+                    <path d="M21.5 12.5a10 10 0 0 1-18.8 4.2" />
+                  </svg>
+                  New questions
+                </button>
               </div>
             )}
 
