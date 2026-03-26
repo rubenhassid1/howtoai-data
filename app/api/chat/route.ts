@@ -3,6 +3,52 @@ import postsData from "@/lib/posts-bundle.json";
 export const runtime = "edge";
 export const maxDuration = 30;
 
+// --- Rate limiter (in-memory, per edge instance) ---
+const RATE_LIMIT = 20;       // max requests per IP
+const RATE_WINDOW = 3600000; // per hour (ms)
+const GLOBAL_LIMIT = 500;    // max total requests per hour across all users
+const ipMap = new Map<string, { count: number; reset: number }>();
+let globalCount = 0;
+let globalReset = Date.now() + RATE_WINDOW;
+
+function checkRateLimit(ip: string): { ok: boolean; remaining: number } {
+  const now = Date.now();
+
+  // Global limit
+  if (now > globalReset) {
+    globalCount = 0;
+    globalReset = now + RATE_WINDOW;
+  }
+  globalCount++;
+  if (globalCount > GLOBAL_LIMIT) {
+    return { ok: false, remaining: 0 };
+  }
+
+  // Per-IP limit
+  const entry = ipMap.get(ip);
+  if (!entry || now > entry.reset) {
+    ipMap.set(ip, { count: 1, reset: now + RATE_WINDOW });
+    return { ok: true, remaining: RATE_LIMIT - 1 };
+  }
+  entry.count++;
+  if (entry.count > RATE_LIMIT) {
+    return { ok: false, remaining: 0 };
+  }
+  return { ok: true, remaining: RATE_LIMIT - entry.count };
+}
+
+// Clean stale entries every 100 requests
+let cleanCounter = 0;
+function maybeClean() {
+  cleanCounter++;
+  if (cleanCounter % 100 === 0) {
+    const now = Date.now();
+    for (const [ip, entry] of ipMap) {
+      if (now > entry.reset) ipMap.delete(ip);
+    }
+  }
+}
+
 function findRelevantPosts(query: string, topK = 5) {
   const keywords = query
     .toLowerCase()
@@ -29,6 +75,20 @@ function findRelevantPosts(query: string, topK = 5) {
 }
 
 export async function POST(request: Request) {
+  // Rate limiting
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  maybeClean();
+  const { ok, remaining } = checkRateLimit(ip);
+  if (!ok) {
+    return Response.json(
+      { error: "Too many requests. Try again later." },
+      {
+        status: 429,
+        headers: { "Retry-After": "60", "X-RateLimit-Remaining": "0" },
+      }
+    );
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return Response.json(
@@ -37,7 +97,14 @@ export async function POST(request: Request) {
     );
   }
 
-  const { message, history } = (await request.json()) as {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: "Invalid request." }, { status: 400 });
+  }
+
+  const { message, history } = body as {
     message: string;
     history?: Array<{ role: string; content: string }>;
   };
@@ -45,6 +112,8 @@ export async function POST(request: Request) {
   if (!message || typeof message !== "string" || message.length > 500) {
     return Response.json({ error: "Invalid message." }, { status: 400 });
   }
+
+  void remaining; // used in rate limit headers below
 
   // Full index of ALL posts (compact: title + date + URL only)
   const fullIndex = postsData
@@ -187,6 +256,7 @@ ${fullContent}`;
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
       Connection: "keep-alive",
+      "X-RateLimit-Remaining": String(remaining),
     },
   });
 }
