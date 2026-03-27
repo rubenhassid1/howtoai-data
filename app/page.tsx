@@ -109,10 +109,10 @@ export default function Home() {
       <main className={`w-full max-w-xl px-5 ${guideOpen ? "pt-10 pb-10" : ""}`}>
         {/* Header */}
         <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-2">
-          How to AI Data
+          Ask Claude anything I&apos;ve ever written.
         </h1>
-        <p className="text-[#a2a2a2] text-[14px] text-center mb-1">
-          Every newsletter post as clean Markdown. Ready for Claude.
+        <p className="text-[#a2a2a2] text-[14px] text-center leading-snug mb-1">
+          Download every How to AI newsletter, feed it to Claude, and get instant answers about AI tools, prompting, and workflows.
         </p>
         <p className="text-[#555] text-[12px] text-center mb-6">
           From one of the largest AI newsletters
