@@ -99,7 +99,7 @@ export default function Home() {
   ];
 
   const exampleQA = [
-    { q: "What's the best AI for search?", a: "Grok 4.20. It beat Perplexity in Ruben's 63-query benchmark across 7 AI tools. — from \"Search.\" (Mar 2026)" },
+    { q: "What's the best AI for search?", a: "Grok 4.20. It beat Perplexity in a 63-query benchmark across 7 AI tools. — from \"Search.\" (Mar 2026)" },
     { q: "How do I set up Claude?", a: "1. Download Claude desktop app. 2. Enable Cowork. 3. Create a Project with your context. 4. Turn on Extended Thinking. — from \"Claude.\" (Feb 2026)" },
     { q: "What are the 7 deadly sins of prompting?", a: "Vagueness, no context, too long, no role, no format, no examples, no iteration. — from \"Sins.\" (Aug 2025)" },
   ];
@@ -108,49 +108,18 @@ export default function Home() {
     <div className={`${guideOpen ? "min-h-screen" : "h-screen overflow-hidden"} bg-[#171717] flex flex-col items-center ${guideOpen ? "" : "justify-center"}`}>
       <main className={`w-full max-w-xl px-5 ${guideOpen ? "pt-10 pb-10" : ""}`}>
         {/* Header */}
-        <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-6">
+        <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-2">
           How to AI Data
         </h1>
-
-        <div className="h-px bg-[#252525] mb-5" />
-
-        {/* Download section */}
-        <h2 className="text-[15px] font-semibold text-white mb-1.5">
-          Download the data
-        </h2>
-        <p className="text-[#a2a2a2] text-[13px] leading-snug mb-4">
-          Get every How to AI newsletter post as clean Markdown files, ready for Claude, ChatGPT, or any AI tool.
+        <p className="text-[#a2a2a2] text-[14px] text-center mb-1">
+          Every newsletter post as clean Markdown. Ready for Claude.
+        </p>
+        <p className="text-[#555] text-[12px] text-center mb-6">
+          From one of the largest AI newsletters
         </p>
 
-        {/* Tier cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-          <div className="rounded-lg border border-[#252525] bg-[#1e1e1e] px-4 py-3.5">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#a2a2a2]" />
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#a2a2a2]">Free subscribers</span>
-            </div>
-            <p className="text-[#ccc] text-[13px] leading-relaxed">
-              <strong className="text-white">All 72 newsletter posts</strong> as Markdown files in a ZIP.
-            </p>
-          </div>
-          <div className="rounded-lg border border-[#FF6719]/25 bg-[#1e1e1e] px-4 py-3.5">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#FF6719]" />
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#FF6719]">Paid subscribers</span>
-            </div>
-            <ul className="text-[#ccc] text-[13px] leading-relaxed space-y-1">
-              <li><strong className="text-white">Everything free gets</strong></li>
-              <li>+ Private Slack community</li>
-              <li>+ $219 in AI tools bundle</li>
-              <li>+ Direct LinkedIn connection</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="h-px bg-[#252525] mb-4" />
-
-        {/* Email form or Download */}
-        <div className="mb-4">
+        {/* Email form or Download — THE main action */}
+        <div className="mb-5">
           {showDownload ? (
             <div className="space-y-3">
               <a
@@ -168,7 +137,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-white font-medium text-[13px]">Download Full Archive</p>
-                    <p className="text-[#555] text-[11px] mt-0.5">72 posts as Markdown — ZIP file</p>
+                    <p className="text-[#555] text-[11px] mt-0.5">Every post as Markdown — ZIP file</p>
                   </div>
                 </div>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-[#FF6719] transition-colors">
@@ -179,14 +148,13 @@ export default function Home() {
                 <p className="text-[#a2a2a2] text-[12px]">
                   Want the Slack community, AI tools & LinkedIn connection?{" "}
                   <a href="https://ruben.substack.com/subscribe" target="_blank" rel="noopener noreferrer" className="text-[#FF6719] hover:text-[#e55a14] transition-colors font-medium">
-                    Upgrade to paid &rarr;
+                    Join the paid community &rarr;
                   </a>
                 </p>
               </div>
             </div>
           ) : (
             <>
-              <label htmlFor="email" className="block text-[13px] font-medium text-[#ccc] mb-2">Your email</label>
               <div className="flex gap-2">
                 <input
                   id="email"
@@ -194,7 +162,7 @@ export default function Home() {
                   value={email}
                   onChange={(e) => { setEmail(e.target.value); setError(null); }}
                   onKeyDown={(e) => { if (e.key === "Enter") handleSubmit(); }}
-                  placeholder="you@example.com"
+                  placeholder="Your email"
                   disabled={loading}
                   className="flex-1 rounded-lg border border-[#252525] bg-[#1e1e1e] px-3.5 py-2.5 text-white text-[13px] placeholder:text-[#555] focus:outline-none focus:border-[#FF6719] focus:ring-1 focus:ring-[#FF6719]/50 transition-colors disabled:opacity-50"
                 />
@@ -202,12 +170,12 @@ export default function Home() {
                   type="button"
                   onClick={handleSubmit}
                   disabled={loading || !email.trim()}
-                  className="rounded-lg bg-[#FF6719] hover:bg-[#e55a14] text-white font-semibold px-5 py-2.5 text-[13px] transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed min-w-[100px] flex items-center justify-center"
+                  className="rounded-lg bg-[#FF6719] hover:bg-[#e55a14] text-white font-semibold px-5 py-2.5 text-[13px] transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed min-w-[120px] flex items-center justify-center"
                 >
                   {loading ? (
                     <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                   ) : (
-                    "Get access"
+                    "Download \u2192"
                   )}
                 </button>
               </div>
@@ -215,6 +183,8 @@ export default function Home() {
             </>
           )}
         </div>
+
+        <div className="h-px bg-[#252525] mb-4" />
 
         {/* How to use with Claude — PROMINENT */}
         <button
@@ -288,19 +258,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* GitHub link — small, at the bottom */}
-        <p className="text-[#555] text-[11px] mb-4">
-          Browse raw data?{" "}
-          <a
-            href="https://github.com/rubenhassid1/howtoai-starter-data"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#777] hover:text-[#FF6719] transition-colors"
-          >
-            Starter repo on GitHub
-          </a>
-        </p>
-
         {/* Footer */}
         <div className="pt-3 border-t border-[#252525] flex items-center justify-between">
           <p className="text-[#555] text-[11px]">
@@ -308,7 +265,14 @@ export default function Home() {
             <a href="https://ruben.substack.com" className="text-[#777] hover:text-[#FF6719] transition-colors">How to AI</a>{" "}
             project by Ruben Hassid
           </p>
-          <p className="text-[#555] text-[11px]">400K+ subscribers</p>
+          <a
+            href="https://github.com/rubenhassid1/howtoai-starter-data"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#555] hover:text-[#FF6719] text-[11px] transition-colors"
+          >
+            GitHub
+          </a>
         </div>
       </main>
     </div>
