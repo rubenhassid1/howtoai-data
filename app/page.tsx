@@ -108,14 +108,12 @@ export default function Home() {
     <div className={`${guideOpen ? "min-h-screen" : "h-screen overflow-hidden"} bg-[#171717] flex flex-col items-center ${guideOpen ? "" : "justify-center"}`}>
       <main className={`w-full max-w-xl px-5 ${guideOpen ? "pt-10 pb-10" : ""}`}>
         {/* Header */}
-        <h1 className="text-[28px] sm:text-[32px] font-bold tracking-tight text-white leading-tight text-center mb-2">
-          Ask Claude anything I&apos;ve ever written.
+        <h1 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-white leading-tight text-center mb-3">
+          You read my newsletters.<br />Now let Claude read them too.
         </h1>
-        <p className="text-[#a2a2a2] text-[14px] text-center leading-snug mb-1">
-          Download every How to AI newsletter, feed it to Claude, and get instant answers about AI tools, prompting, and workflows.
-        </p>
-        <p className="text-[#555] text-[12px] text-center mb-6">
-          From one of the largest AI newsletters
+        <p className="text-[#a2a2a2] text-[13px] text-center leading-snug mb-6">
+          That tip I shared 3 months ago? The prompt template from last week?<br className="hidden sm:inline" />
+          Stop digging through your inbox. Download everything, give it to Claude, and just ask.
         </p>
 
         {/* Email form or Download — THE main action */}
