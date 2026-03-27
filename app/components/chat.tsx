@@ -204,16 +204,33 @@ export default function Chat() {
               <p className="text-white text-[13px] font-semibold">Ask How to AI</p>
               <p className="text-[#777] text-[10px]">Answers from 72 newsletters</p>
             </div>
-            <button
-              onClick={() => setOpen(false)}
-              className="w-7 h-7 rounded-md hover:bg-[#252525] flex items-center justify-center transition-colors cursor-pointer"
-              aria-label="Close chat"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#777" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
+            <div className="flex items-center gap-1">
+              {messages.length > 0 && (
+                <button
+                  onClick={() => { setMessages([]); setSuggestions(pickRandom()); }}
+                  className="w-7 h-7 rounded-md hover:bg-[#252525] flex items-center justify-center transition-colors cursor-pointer"
+                  aria-label="Clear chat"
+                  title="New chat"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#777" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21.5 2v6h-6" />
+                    <path d="M2.5 22v-6h6" />
+                    <path d="M2.5 11.5a10 10 0 0 1 18.8-4.3" />
+                    <path d="M21.5 12.5a10 10 0 0 1-18.8 4.2" />
+                  </svg>
+                </button>
+              )}
+              <button
+                onClick={() => setOpen(false)}
+                className="w-7 h-7 rounded-md hover:bg-[#252525] flex items-center justify-center transition-colors cursor-pointer"
+                aria-label="Close chat"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#777" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Messages */}
