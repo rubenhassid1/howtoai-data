@@ -10,8 +10,11 @@ if (!COOKIE) {
 const DATA_FILE = "data/substack-subscribers.json";
 
 async function fetchExactCount() {
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    userAgent:
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+  });
 
   await context.addCookies([
     {
@@ -24,21 +27,68 @@ async function fetchExactCount() {
 
   const page = await context.newPage();
 
-  await page.goto("https://ruben.substack.com/publish/subscribers", {
-    waitUntil: "domcontentloaded",
-    timeout: 45000,
+  // Intercept XHR responses that may contain subscriber data
+  let xhrCount = null;
+  page.on("response", async (response) => {
+    try {
+      const url = response.url();
+      if (url.includes("/api/") && response.status() === 200) {
+        const text = await response.text().catch(() => "");
+        // Look for subscriber count in API responses
+        const m = text.match(/"total_subscribers?"\s*:\s*(\d+)/);
+        if (m) xhrCount = parseInt(m[1], 10);
+      }
+    } catch {}
   });
 
-  // Wait for the subscriber count to render via client-side JS
-  await page.waitForTimeout(5000);
+  await page.goto("https://ruben.substack.com/publish/subscribers", {
+    waitUntil: "domcontentloaded",
+    timeout: 60000,
+  });
+
+  // Wait for client-side JS to fetch and render data
+  await page.waitForTimeout(8000);
 
   let count = null;
 
-  // The dashboard header shows "410,901 subscribers" — extract that pattern
+  // Approach 1: Extract from page text — "410,901 subscribers"
   const allText = await page.textContent("body");
   const match = allText.match(/([\d,]+)\s+subscribers/);
   if (match) {
-    count = parseInt(match[1].replace(/,/g, ""), 10);
+    const num = parseInt(match[1].replace(/,/g, ""), 10);
+    if (num > 100000) count = num;
+  }
+
+  // Approach 2: Use intercepted XHR data
+  if (!count && xhrCount) {
+    count = xhrCount;
+  }
+
+  // Approach 3: Try the growth page
+  if (!count) {
+    console.log("Subscribers page didn't work, trying growth page...");
+    await page.goto("https://ruben.substack.com/publish/growth", {
+      waitUntil: "domcontentloaded",
+      timeout: 60000,
+    });
+    await page.waitForTimeout(8000);
+
+    const growthText = await page.textContent("body");
+    const growthMatch = growthText.match(/([\d,]+)\s+subscribers/);
+    if (growthMatch) {
+      const num = parseInt(growthMatch[1].replace(/,/g, ""), 10);
+      if (num > 100000) count = num;
+    }
+  }
+
+  // Debug output if extraction failed
+  if (!count) {
+    console.error("Page URL:", page.url());
+    console.error(
+      "Page text (first 500 chars):",
+      allText.slice(0, 500).replace(/\s+/g, " ")
+    );
+    await page.screenshot({ path: "/tmp/substack-debug.png" }).catch(() => {});
   }
 
   await browser.close();
