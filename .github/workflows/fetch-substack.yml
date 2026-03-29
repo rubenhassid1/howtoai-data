@@ -1,0 +1,41 @@
+name: Fetch Substack Subscriber Count
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 08:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm install playwright@latest
+          npx playwright install chromium --with-deps
+
+      - name: Fetch exact subscriber count
+        env:
+          SUBSTACK_SID: ${{ secrets.SUBSTACK_SID }}
+        run: node scripts/fetch-substack-subscribers.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add data/substack-subscribers.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update substack subscribers $(date -u +%Y-%m-%d)"
+            git push
+          fi
