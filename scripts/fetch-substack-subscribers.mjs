@@ -41,15 +41,29 @@ async function fetchExactCount() {
   };
 
   console.log("Starting Apify actor...");
-  const runRes = await fetch(
-    `https://api.apify.com/v2/acts/apify~playwright-scraper/runs?token=${APIFY_TOKEN}&waitForFinish=240`,
+  const startRes = await fetch(
+    `https://api.apify.com/v2/acts/apify~playwright-scraper/runs?token=${APIFY_TOKEN}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(input),
     }
   );
-  const run = (await runRes.json()).data;
+  const { data: startData } = await startRes.json();
+  const runId = startData.id;
+  console.log(`Run started: ${runId}`);
+
+  // Poll until done (up to 5 minutes)
+  let run;
+  for (let i = 0; i < 30; i++) {
+    await new Promise((r) => setTimeout(r, 10000));
+    const statusRes = await fetch(
+      `https://api.apify.com/v2/actor-runs/${runId}?token=${APIFY_TOKEN}`
+    );
+    run = (await statusRes.json()).data;
+    console.log(`Status: ${run.status} (${(i + 1) * 10}s)`);
+    if (run.status === "SUCCEEDED" || run.status === "FAILED" || run.status === "ABORTED") break;
+  }
 
   if (run.status !== "SUCCEEDED") {
     console.error(`Apify run failed: ${run.status} — ${run.statusMessage}`);
@@ -57,7 +71,7 @@ async function fetchExactCount() {
   }
 
   const dsRes = await fetch(
-    `https://api.apify.com/v2/datasets/${run.defaultDatasetId}/items?token=${APIFY_TOKEN}`
+    `https://api.apify.com/v2/datasets/${startData.defaultDatasetId}/items?token=${APIFY_TOKEN}`
   );
   const items = await dsRes.json();
 
