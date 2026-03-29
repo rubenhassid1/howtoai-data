@@ -10,10 +10,26 @@ if (!COOKIE) {
 const DATA_FILE = "data/substack-subscribers.json";
 
 async function fetchExactCount() {
-  const browser = await chromium.launch({ headless: true });
+  // Use non-headless tricks to avoid Cloudflare bot detection
+  const browser = await chromium.launch({
+    headless: false,
+    args: [
+      "--headless=new",
+      "--disable-blink-features=AutomationControlled",
+      "--no-sandbox",
+    ],
+  });
+
   const context = await browser.newContext({
     userAgent:
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    viewport: { width: 1280, height: 720 },
+    locale: "en-US",
+  });
+
+  // Remove webdriver indicator
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => false });
   });
 
   await context.addCookies([
@@ -27,68 +43,61 @@ async function fetchExactCount() {
 
   const page = await context.newPage();
 
-  // Intercept XHR responses that may contain subscriber data
-  let xhrCount = null;
-  page.on("response", async (response) => {
-    try {
-      const url = response.url();
-      if (url.includes("/api/") && response.status() === 200) {
-        const text = await response.text().catch(() => "");
-        // Look for subscriber count in API responses
-        const m = text.match(/"total_subscribers?"\s*:\s*(\d+)/);
-        if (m) xhrCount = parseInt(m[1], 10);
-      }
-    } catch {}
-  });
-
+  // Navigate and wait for Cloudflare challenge to resolve
   await page.goto("https://ruben.substack.com/publish/subscribers", {
     waitUntil: "domcontentloaded",
     timeout: 60000,
   });
 
-  // Wait for client-side JS to fetch and render data
-  await page.waitForTimeout(8000);
-
+  // Wait for Cloudflare challenge to pass + page to render
+  // Poll for up to 30s until we see "subscribers" in the page
   let count = null;
+  for (let attempt = 0; attempt < 15; attempt++) {
+    await page.waitForTimeout(2000);
+    const text = await page.textContent("body");
 
-  // Approach 1: Extract from page text — "410,901 subscribers"
-  const allText = await page.textContent("body");
-  const match = allText.match(/([\d,]+)\s+subscribers/);
-  if (match) {
-    const num = parseInt(match[1].replace(/,/g, ""), 10);
-    if (num > 100000) count = num;
+    const match = text.match(/([\d,]+)\s+subscribers/);
+    if (match) {
+      const num = parseInt(match[1].replace(/,/g, ""), 10);
+      if (num > 100000) {
+        count = num;
+        break;
+      }
+    }
+
+    // Check if still on Cloudflare challenge
+    if (text.includes("security verification") || text.includes("cf_chl")) {
+      console.log(`Waiting for Cloudflare challenge (attempt ${attempt + 1})...`);
+      continue;
+    }
   }
 
-  // Approach 2: Use intercepted XHR data
-  if (!count && xhrCount) {
-    count = xhrCount;
-  }
-
-  // Approach 3: Try the growth page
+  // Fallback: try growth page
   if (!count) {
-    console.log("Subscribers page didn't work, trying growth page...");
+    console.log("Trying growth page...");
     await page.goto("https://ruben.substack.com/publish/growth", {
       waitUntil: "domcontentloaded",
       timeout: 60000,
     });
-    await page.waitForTimeout(8000);
 
-    const growthText = await page.textContent("body");
-    const growthMatch = growthText.match(/([\d,]+)\s+subscribers/);
-    if (growthMatch) {
-      const num = parseInt(growthMatch[1].replace(/,/g, ""), 10);
-      if (num > 100000) count = num;
+    for (let attempt = 0; attempt < 10; attempt++) {
+      await page.waitForTimeout(2000);
+      const text = await page.textContent("body");
+      const match = text.match(/([\d,]+)\s+subscribers/);
+      if (match) {
+        const num = parseInt(match[1].replace(/,/g, ""), 10);
+        if (num > 100000) {
+          count = num;
+          break;
+        }
+      }
     }
   }
 
-  // Debug output if extraction failed
   if (!count) {
+    const text = await page.textContent("body");
     console.error("Page URL:", page.url());
-    console.error(
-      "Page text (first 500 chars):",
-      allText.slice(0, 500).replace(/\s+/g, " ")
-    );
-    await page.screenshot({ path: "/tmp/substack-debug.png" }).catch(() => {});
+    console.error("Page text (first 500):", text.slice(0, 500).replace(/\s+/g, " "));
   }
 
   await browser.close();
