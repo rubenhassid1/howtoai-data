@@ -18,14 +18,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Playwright
-        run: |
-          npm install playwright@latest
-          npx playwright install chromium --with-deps
-
       - name: Fetch exact subscriber count
         env:
           SUBSTACK_SID: ${{ secrets.SUBSTACK_SID }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: node scripts/fetch-substack-subscribers.mjs
 
       - name: Commit and push
