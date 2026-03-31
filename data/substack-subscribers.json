@@ -1,7 +1,7 @@
 {
   "latest": {
-    "date": "2026-03-29",
-    "subscribers": 415697
+    "date": "2026-03-31",
+    "subscribers": 422012
   },
   "history": [
     {
@@ -15,6 +15,10 @@
     {
       "date": "2026-03-29",
       "subscribers": 415697
+    },
+    {
+      "date": "2026-03-31",
+      "subscribers": 422012
     }
   ]
 }
